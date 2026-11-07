@@ -3,7 +3,7 @@ d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c  ./.gitattribut
 a23197aaa7cbd0395e70a7c58ba5dc2fbc175aa2e173601290939e8c0457b7f8  ./.gitignore
 7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d  ./.python-version
 366dc538201814fd653fbdf62fe4a7c6d04c562d6a9bb7b66d862e8bedbdcdf7  ./README.md
-39d42c2460d74861a53f27277638ac55c9b20628ad27428292b9de0d424c335d  ./VERIFICATION.md
+f1cf451d5121d4213af8031c8513c4b7bbe070eb1ba087af3f56aa4624ed83f1  ./VERIFICATION.md
 15e1bec1a02a19c149e3bd729bb3902793dfd1c9487e2d17055b2952b5b09081  ./data/synthetic/CHECKSUMS.md
 6296656cf6e885ac8ec07ff4e03f296df2d55f4bdc73b16c305dcbd0013d63f7  ./data/synthetic/FIXTURE.sha256
 ebb6ae376489ce61ccfb359c24ef5e7363347c40734a3f348de8f25d7253809e  ./data/synthetic/README.md
@@ -47,7 +47,7 @@ ba21622e04aa8efd36fad22299696f8b1f1ad36faac567b0bc077236bc20b36d  ./src/retrieva
 846f3c41577e2453d21ec332fd4cf0c8a948eea087b269656df447692e231732  ./src/retrieval_eval/provenance.py
 af2627050d9887557eaec5fe952de39a96522d8d4f72acbfce04bc19098d8d21  ./src/retrieval_eval/retrievers.py
 9741d80ba04160514597edbaaea8eeb44e2166f1d8abbcf980a0cf1dd199ddfe  ./src/retrieval_eval/runner.py
-04edb2507b3b90d2da65764880af6c9de5c4988246f4961697f15decbd8fc0e0  ./src/retrieval_eval/viewer.py
+804f8dcbd3ab420f1fa58c70bf60d5a50d4cf7c52242b666825f168556342871  ./src/retrieval_eval/viewer.py
 2d94c3366f9fe0e24cabd09a5e1cecc3562417a84305d0cc4c28de112b362373  ./tests/fakes.py
 5eaeaf4d5c447c2f8d5746aaa6ad7d1fa1083ee8201bc59e2f40df50db1968f0  ./tests/test_cli.py
 90a60ccfaf043d8de11d4420f81b2d0ce2f713ddba2ca2c4098f56c102abd0ff  ./tests/test_data.py
@@ -57,5 +57,5 @@ b4c69beac70f5a86e9922e88adc8c8ca8819347c2d8229c1afa6ab44f2484020  ./tests/test_p
 edefa8a2d24a5f2eeae4929d7c6a7206304f3ab7b987f556df17b4a0c2d1d5e4  ./tests/test_retrievers.py
 0cd1263800bbd802c29c52d71b52a00db485b218f49821c5db11d0e7ec4d55f5  ./tests/test_retrievers_model.py
 1a635785ef7825ebc8e262128245d70be45253651376ebcad8fbcdccb3020ff9  ./tests/test_runner.py
-fe07697b992a5472fd74d6428153e94ac8c38a5bd8e7688dfddc9a117e9bded3  ./tests/test_viewer.py
+82328671e9d803492fcf64f9afacd190b9245d5000ee9a37ededffed874f408b  ./tests/test_viewer.py
 e8d2ce96b101279e2ab1f0dc3782819cb283c0c1265a1c76202b8871626dba9b  ./uv.lock

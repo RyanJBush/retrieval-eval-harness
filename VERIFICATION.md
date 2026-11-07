@@ -1,5 +1,9 @@
 # Final delivery verification
 
+This report records the prepublication archive checks. See [GitHub Actions](https://github.com/RyanJBush/retrieval-eval-harness/actions/workflows/tests.yml)
+for hosted results. The bundled run records the source fingerprint of the [initial publication](https://github.com/RyanJBush/retrieval-eval-harness/commit/de6aa33488e70cdbdb8c06eda970ab6e2be6e3a3).
+The subsequent viewer startup fix flushes the printed URL when stdout is captured. It leaves the retrieval and timing code as published.
+
 Prepared by Claude on 2026-11-07. **All results below were produced on Linux** (Linux 6.18 x86_64, Intel Xeon 2.10 GHz, 1 logical CPU, 3.9 GiB, Python 3.12.3,
 uv 0.11.32, torch 2.15.0+cpu, sentence-transformers 6.2.0, one torch thread). They are Claude-reported until an independent reviewer reruns them. **Nothing in this
 package was run on Windows by Claude, and no hosted CI run exists.**
@@ -40,7 +44,7 @@ model smoke, a fresh CLI run compared with the bundled example, viewer smoke on 
 ## Bundled real run (`examples/demo/`)
 Run `a2a9d02d2f2b4698a07a02c470e68c18`, schema 1.1, produced by `uv run --no-sync python -m retrieval_eval.cli --dataset data/synthetic --out-dir examples/demo` with the real pinned model on CPU; the fixture
 manifest was `OK` (3/3) before and after. 8 total / 7 scored / 1 no-judged-relevant per method; 6 / 48 / 80 / 320 / 18 CSV rows; 370 repeat-search checks, 0 ranking disagreements; model cache `verified_complete`; its code
-fingerprint equals the delivered source. BM25 Recall@1/3/5 0.7143, MRR 0.8571; embedding 0.8571 / 1.0000 / 1.0000, MRR 1.0000. Latency (n=160 per method): BM25 median 0.109 / p95 0.207 ms; embedding 11.833 / 16.604 ms. The run was
+fingerprint matches the initial publication. BM25 Recall@1/3/5 0.7143, MRR 0.8571; embedding 0.8571 / 1.0000 / 1.0000, MRR 1.0000. Latency (n=160 per method): BM25 median 0.109 / p95 0.207 ms; embedding 11.833 / 16.604 ms. The run was
 recorded while the machine was slow (library import 24.2 s, model load 2.9 s, document index 4.0 s, against 4 to 6 s, 0.4 to 0.5 s and 0.14 to 0.25 s in other runs); a fresh run later measured an embedding median of 8.441 ms. The quality-bearing values
 are identical across runs.
 

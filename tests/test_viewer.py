@@ -629,6 +629,26 @@ def test_cli_serves_until_interrupted(run_file, monkeypatch, capsys):
     assert "http://127.0.0.1:4321/" in out and "synthetic" in out
 
 
+def test_cli_flushes_the_startup_url_before_serving(run_file, monkeypatch):
+    import io
+
+    raw = io.BytesIO()
+    with io.TextIOWrapper(raw, encoding="utf-8") as stdout, monkeypatch.context() as patch:
+        class Server:
+            server_port = 4321
+
+            def serve_forever(self):
+                assert b"http://127.0.0.1:4321/" in raw.getvalue()
+                raise KeyboardInterrupt
+
+            def server_close(self):
+                pass
+
+        patch.setattr(sys, "stdout", stdout)
+        patch.setattr(viewer, "make_server", lambda run, port: Server())
+        assert viewer.main([str(run_file), "--port", "0"]) == 0
+
+
 # ------------------------------------------------------------------ narrow-screen layout (structure; see evidence/ for a browser check)
 class _TableScopes(html.parser.HTMLParser):
     """Records, for every <table>, whether it sits inside a div.table-scroll."""

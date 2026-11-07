@@ -484,7 +484,11 @@ def main(argv=None) -> int:
         print(f"error: cannot start the viewer on {HOST}:{args.port}: {exc} (the port may already be in use; "
               "choose another with --port N, or use --port 0 for any free port)", file=sys.stderr)
         return 2
-    print(f"viewing run {run['run']['run_id']} ({run['dataset']['designation']}) at http://127.0.0.1:{server.server_port}/  (Ctrl-C to stop)")
+    print(
+        f"viewing run {run['run']['run_id']} ({run['dataset']['designation']}) "
+        f"at http://127.0.0.1:{server.server_port}/  (Ctrl-C to stop)",
+        flush=True,
+    )
     try:
         server.serve_forever()
     except KeyboardInterrupt:
