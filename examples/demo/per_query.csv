@@ -1,0 +1,49 @@
+method,query_id,query_text,k,status,n_relevant,n_returned,recall,rr
+bm25,q01,E4107,1,scored,1,5,1.0,1.0
+bm25,q01,E4107,3,scored,1,5,1.0,1.0
+bm25,q01,E4107,5,scored,1,5,1.0,1.0
+bm25,q02,how do I get reimbursed for a business trip,1,scored,1,5,0.0,0.0
+bm25,q02,how do I get reimbursed for a business trip,3,scored,1,5,0.0,0.0
+bm25,q02,how do I get reimbursed for a business trip,5,scored,1,5,0.0,0.0
+bm25,q03,regain access to my account,1,scored,2,5,0.5,1.0
+bm25,q03,regain access to my account,3,scored,2,5,0.5,1.0
+bm25,q03,regain access to my account,5,scored,2,5,0.5,1.0
+bm25,q04,how do pythons catch their prey,1,scored,1,5,1.0,1.0
+bm25,q04,how do pythons catch their prey,3,scored,1,5,1.0,1.0
+bm25,q04,how do pythons catch their prey,5,scored,1,5,1.0,1.0
+bm25,q05,how do researchers estimate jaguar territory,1,scored,1,5,1.0,1.0
+bm25,q05,how do researchers estimate jaguar territory,3,scored,1,5,1.0,1.0
+bm25,q05,how do researchers estimate jaguar territory,5,scored,1,5,1.0,1.0
+bm25,q06,is the path by the river bank open in spring,1,scored,1,5,1.0,1.0
+bm25,q06,is the path by the river bank open in spring,3,scored,1,5,1.0,1.0
+bm25,q06,is the path by the river bank open in spring,5,scored,1,5,1.0,1.0
+bm25,q07,"analytics queries time out, how to fix",1,scored,2,5,0.5,1.0
+bm25,q07,"analytics queries time out, how to fix",3,scored,2,5,0.5,1.0
+bm25,q07,"analytics queries time out, how to fix",5,scored,2,5,0.5,1.0
+bm25,q08,what is the policy on pet dogs in the office,1,no_judged_relevant,0,5,,
+bm25,q08,what is the policy on pet dogs in the office,3,no_judged_relevant,0,5,,
+bm25,q08,what is the policy on pet dogs in the office,5,no_judged_relevant,0,5,,
+embedding,q01,E4107,1,scored,1,5,1.0,1.0
+embedding,q01,E4107,3,scored,1,5,1.0,1.0
+embedding,q01,E4107,5,scored,1,5,1.0,1.0
+embedding,q02,how do I get reimbursed for a business trip,1,scored,1,5,1.0,1.0
+embedding,q02,how do I get reimbursed for a business trip,3,scored,1,5,1.0,1.0
+embedding,q02,how do I get reimbursed for a business trip,5,scored,1,5,1.0,1.0
+embedding,q03,regain access to my account,1,scored,2,5,0.5,1.0
+embedding,q03,regain access to my account,3,scored,2,5,1.0,1.0
+embedding,q03,regain access to my account,5,scored,2,5,1.0,1.0
+embedding,q04,how do pythons catch their prey,1,scored,1,5,1.0,1.0
+embedding,q04,how do pythons catch their prey,3,scored,1,5,1.0,1.0
+embedding,q04,how do pythons catch their prey,5,scored,1,5,1.0,1.0
+embedding,q05,how do researchers estimate jaguar territory,1,scored,1,5,1.0,1.0
+embedding,q05,how do researchers estimate jaguar territory,3,scored,1,5,1.0,1.0
+embedding,q05,how do researchers estimate jaguar territory,5,scored,1,5,1.0,1.0
+embedding,q06,is the path by the river bank open in spring,1,scored,1,5,1.0,1.0
+embedding,q06,is the path by the river bank open in spring,3,scored,1,5,1.0,1.0
+embedding,q06,is the path by the river bank open in spring,5,scored,1,5,1.0,1.0
+embedding,q07,"analytics queries time out, how to fix",1,scored,2,5,0.5,1.0
+embedding,q07,"analytics queries time out, how to fix",3,scored,2,5,1.0,1.0
+embedding,q07,"analytics queries time out, how to fix",5,scored,2,5,1.0,1.0
+embedding,q08,what is the policy on pet dogs in the office,1,no_judged_relevant,0,5,,
+embedding,q08,what is the policy on pet dogs in the office,3,no_judged_relevant,0,5,,
+embedding,q08,what is the policy on pet dogs in the office,5,no_judged_relevant,0,5,,

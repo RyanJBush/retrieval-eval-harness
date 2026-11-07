@@ -1,0 +1,20 @@
+{"doc_id": "d01", "text": "Error E4107 appears when the billing service cannot reach the ledger database. Restart the ledger connector and check the connection pool limit."}
+{"doc_id": "d02", "text": "To reset a forgotten password, open the sign-in page, choose Forgot password, and follow the emailed link within 30 minutes."}
+{"doc_id": "d03", "text": "Account recovery after losing access to your email address requires identity verification through the support portal."}
+{"doc_id": "d04", "text": "The Jaguar rental fleet adds three new electric sedans in March; reservations open to members first."}
+{"doc_id": "d05", "text": "Jaguar populations in the Pantanal wetlands are monitored with camera traps to estimate territory size."}
+{"doc_id": "d06", "text": "A Python virtual environment isolates project dependencies; create one with the venv module and activate it before installing packages."}
+{"doc_id": "d07", "text": "Pythons are non-venomous constrictors that kill prey by coiling around it and tightening their grip."}
+{"doc_id": "d08", "text": "Release 3.8.2 fixes a memory leak in the image resizer and updates the TLS certificate bundle."}
+{"doc_id": "d09", "text": "Purchases over 500 dollars require approval from a department head before the order is placed."}
+{"doc_id": "d10", "text": "Travel costs are repaid when receipts are uploaded to the finance portal within 60 days of returning."}
+{"doc_id": "d11", "text": "Ticket SEC-2291 tracks the rotation of API signing keys scheduled for the first week of December."}
+{"doc_id": "d12", "text": "Rotate encryption keys every 90 days and store old keys in the archive vault for audit purposes."}
+{"doc_id": "d13", "text": "The office kitchen is cleaned on Fridays; please label food kept in the shared refrigerator."}
+{"doc_id": "d14", "text": "The north bank of the river erodes during spring floods, so the footpath along it is closed from April to May."}
+{"doc_id": "d15", "text": "The bank approved the loan application after reviewing the applicant's credit history and income statements."}
+{"doc_id": "d16", "text": "Laptop battery drains quickly when screen brightness is high; enable power saver mode to extend runtime."}
+{"doc_id": "d17", "text": "Remote employees can request a monitor, keyboard, or standing desk through the equipment form."}
+{"doc_id": "d18", "text": "Query timeouts in the analytics warehouse usually come from missing partition filters; add a date filter to the WHERE clause."}
+{"doc_id": "d19", "text": "Slow dashboard loading is often caused by scanning the full events table instead of a single day's partition."}
+{"doc_id": "d20", "text": "Fire drills occur quarterly; assemble at the south parking lot and wait for the warden's all-clear."}

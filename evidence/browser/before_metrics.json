@@ -1,0 +1,60 @@
+{
+ "desktop": {
+  "url": "?q=q02&k=3",
+  "innerWidth": 1036,
+  "docScrollWidth": 1036,
+  "docClientWidth": 1036,
+  "bodyScrollWidth": 988,
+  "tables": 4,
+  "scrollRegions": [],
+  "overflowingTables": 0,
+  "columns": 2,
+  "headers": [
+   "bm25",
+   "embedding"
+  ],
+  "recallLines": [
+   "Recall@3: 0.0000 \u00b7 RR@3: 0.0000 \u00b7 status",
+   "Recall@3: 1.0000 \u00b7 RR@3: 1.0000 \u00b7 status"
+  ],
+  "notes": [
+   "Scored, zero recall: the query has 1 judged-relevant document(s) and n"
+  ],
+  "relevantItems": [
+   "d10: missed: not in the saved top-5 \u2014 Travel cos",
+   "d10: found at rank 1 \u2014 Travel costs are repaid w"
+  ],
+  "firstEmbeddingRow": "1d100.577152relevantTravel costs are repaid when receipts are uploaded to the finance portal within 60 days of returning.",
+  "consoleMessages": [],
+  "horizontalPageScroll": false
+ },
+ "narrow": {
+  "url": "?q=q02&k=3",
+  "innerWidth": 390,
+  "docScrollWidth": 556,
+  "docClientWidth": 390,
+  "bodyScrollWidth": 532,
+  "tables": 4,
+  "scrollRegions": [],
+  "overflowingTables": 3,
+  "columns": 1,
+  "headers": [
+   "bm25",
+   "embedding"
+  ],
+  "recallLines": [
+   "Recall@3: 0.0000 \u00b7 RR@3: 0.0000 \u00b7 status",
+   "Recall@3: 1.0000 \u00b7 RR@3: 1.0000 \u00b7 status"
+  ],
+  "notes": [
+   "Scored, zero recall: the query has 1 judged-relevant document(s) and n"
+  ],
+  "relevantItems": [
+   "d10: missed: not in the saved top-5 \u2014 Travel cos",
+   "d10: found at rank 1 \u2014 Travel costs are repaid w"
+  ],
+  "firstEmbeddingRow": "1d100.577152relevantTravel costs are repaid when receipts are uploaded to the finance portal within 60 days of returning.",
+  "consoleMessages": [],
+  "horizontalPageScroll": true
+ }
+}

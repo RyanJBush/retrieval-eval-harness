@@ -1,0 +1,5224 @@
+{
+  "schema_version": "1.1",
+  "run": {
+    "run_id": "a2a9d02d2f2b4698a07a02c470e68c18",
+    "status": "completed",
+    "started_utc": "2026-11-07T21:06:29+00:00",
+    "finished_utc": "2026-11-07T21:07:03+00:00",
+    "command": [
+      "python",
+      "-m",
+      "retrieval_eval.cli",
+      "--dataset",
+      "data/synthetic",
+      "--out-dir",
+      "examples/demo"
+    ]
+  },
+  "config": {
+    "dataset_dir": "data/synthetic",
+    "ks": [
+      1,
+      3,
+      5
+    ],
+    "max_k": 5,
+    "warmup_per_query_method": 3,
+    "measured_per_query_method": 20,
+    "threads_requested": 1,
+    "device": "cpu",
+    "methods": [
+      "bm25",
+      "embedding"
+    ]
+  },
+  "dataset": {
+    "designation": "synthetic",
+    "synthetic_developer_fixture": true,
+    "directory": "data/synthetic",
+    "files": [
+      {
+        "name": "documents.jsonl",
+        "sha256": "ccd017d315a31bb71c17fc1607282f555a110b544787b42be5ecf8c0f27f60c1",
+        "bytes": 2746
+      },
+      {
+        "name": "queries.jsonl",
+        "sha256": "b604a9bc9a2f62d441c30b4398d424b3ab9fa9dd011f5995c1cdf8e80691a0dd",
+        "bytes": 532
+      },
+      {
+        "name": "qrels.csv",
+        "sha256": "fbe98a9ba0179ccce8d862fe387b396b0e6ded272725543975a1e56c383f56d5",
+        "bytes": 1626
+      }
+    ],
+    "fixture_manifest": {
+      "name": "FIXTURE.sha256",
+      "present": true,
+      "verified": true
+    },
+    "counts": {
+      "documents": 20,
+      "queries": 8,
+      "judgments": 160,
+      "positive_judgments": 9,
+      "queries_without_relevant": 1
+    },
+    "documents": [
+      {
+        "doc_id": "d01",
+        "text": "Error E4107 appears when the billing service cannot reach the ledger database. Restart the ledger connector and check the connection pool limit."
+      },
+      {
+        "doc_id": "d02",
+        "text": "To reset a forgotten password, open the sign-in page, choose Forgot password, and follow the emailed link within 30 minutes."
+      },
+      {
+        "doc_id": "d03",
+        "text": "Account recovery after losing access to your email address requires identity verification through the support portal."
+      },
+      {
+        "doc_id": "d04",
+        "text": "The Jaguar rental fleet adds three new electric sedans in March; reservations open to members first."
+      },
+      {
+        "doc_id": "d05",
+        "text": "Jaguar populations in the Pantanal wetlands are monitored with camera traps to estimate territory size."
+      },
+      {
+        "doc_id": "d06",
+        "text": "A Python virtual environment isolates project dependencies; create one with the venv module and activate it before installing packages."
+      },
+      {
+        "doc_id": "d07",
+        "text": "Pythons are non-venomous constrictors that kill prey by coiling around it and tightening their grip."
+      },
+      {
+        "doc_id": "d08",
+        "text": "Release 3.8.2 fixes a memory leak in the image resizer and updates the TLS certificate bundle."
+      },
+      {
+        "doc_id": "d09",
+        "text": "Purchases over 500 dollars require approval from a department head before the order is placed."
+      },
+      {
+        "doc_id": "d10",
+        "text": "Travel costs are repaid when receipts are uploaded to the finance portal within 60 days of returning."
+      },
+      {
+        "doc_id": "d11",
+        "text": "Ticket SEC-2291 tracks the rotation of API signing keys scheduled for the first week of December."
+      },
+      {
+        "doc_id": "d12",
+        "text": "Rotate encryption keys every 90 days and store old keys in the archive vault for audit purposes."
+      },
+      {
+        "doc_id": "d13",
+        "text": "The office kitchen is cleaned on Fridays; please label food kept in the shared refrigerator."
+      },
+      {
+        "doc_id": "d14",
+        "text": "The north bank of the river erodes during spring floods, so the footpath along it is closed from April to May."
+      },
+      {
+        "doc_id": "d15",
+        "text": "The bank approved the loan application after reviewing the applicant's credit history and income statements."
+      },
+      {
+        "doc_id": "d16",
+        "text": "Laptop battery drains quickly when screen brightness is high; enable power saver mode to extend runtime."
+      },
+      {
+        "doc_id": "d17",
+        "text": "Remote employees can request a monitor, keyboard, or standing desk through the equipment form."
+      },
+      {
+        "doc_id": "d18",
+        "text": "Query timeouts in the analytics warehouse usually come from missing partition filters; add a date filter to the WHERE clause."
+      },
+      {
+        "doc_id": "d19",
+        "text": "Slow dashboard loading is often caused by scanning the full events table instead of a single day's partition."
+      },
+      {
+        "doc_id": "d20",
+        "text": "Fire drills occur quarterly; assemble at the south parking lot and wait for the warden's all-clear."
+      }
+    ],
+    "queries": [
+      {
+        "query_id": "q01",
+        "text": "E4107"
+      },
+      {
+        "query_id": "q02",
+        "text": "how do I get reimbursed for a business trip"
+      },
+      {
+        "query_id": "q03",
+        "text": "regain access to my account"
+      },
+      {
+        "query_id": "q04",
+        "text": "how do pythons catch their prey"
+      },
+      {
+        "query_id": "q05",
+        "text": "how do researchers estimate jaguar territory"
+      },
+      {
+        "query_id": "q06",
+        "text": "is the path by the river bank open in spring"
+      },
+      {
+        "query_id": "q07",
+        "text": "analytics queries time out, how to fix"
+      },
+      {
+        "query_id": "q08",
+        "text": "what is the policy on pet dogs in the office"
+      }
+    ],
+    "judgments": [
+      [
+        "q01",
+        "d01",
+        1
+      ],
+      [
+        "q01",
+        "d02",
+        0
+      ],
+      [
+        "q01",
+        "d03",
+        0
+      ],
+      [
+        "q01",
+        "d04",
+        0
+      ],
+      [
+        "q01",
+        "d05",
+        0
+      ],
+      [
+        "q01",
+        "d06",
+        0
+      ],
+      [
+        "q01",
+        "d07",
+        0
+      ],
+      [
+        "q01",
+        "d08",
+        0
+      ],
+      [
+        "q01",
+        "d09",
+        0
+      ],
+      [
+        "q01",
+        "d10",
+        0
+      ],
+      [
+        "q01",
+        "d11",
+        0
+      ],
+      [
+        "q01",
+        "d12",
+        0
+      ],
+      [
+        "q01",
+        "d13",
+        0
+      ],
+      [
+        "q01",
+        "d14",
+        0
+      ],
+      [
+        "q01",
+        "d15",
+        0
+      ],
+      [
+        "q01",
+        "d16",
+        0
+      ],
+      [
+        "q01",
+        "d17",
+        0
+      ],
+      [
+        "q01",
+        "d18",
+        0
+      ],
+      [
+        "q01",
+        "d19",
+        0
+      ],
+      [
+        "q01",
+        "d20",
+        0
+      ],
+      [
+        "q02",
+        "d01",
+        0
+      ],
+      [
+        "q02",
+        "d02",
+        0
+      ],
+      [
+        "q02",
+        "d03",
+        0
+      ],
+      [
+        "q02",
+        "d04",
+        0
+      ],
+      [
+        "q02",
+        "d05",
+        0
+      ],
+      [
+        "q02",
+        "d06",
+        0
+      ],
+      [
+        "q02",
+        "d07",
+        0
+      ],
+      [
+        "q02",
+        "d08",
+        0
+      ],
+      [
+        "q02",
+        "d09",
+        0
+      ],
+      [
+        "q02",
+        "d10",
+        1
+      ],
+      [
+        "q02",
+        "d11",
+        0
+      ],
+      [
+        "q02",
+        "d12",
+        0
+      ],
+      [
+        "q02",
+        "d13",
+        0
+      ],
+      [
+        "q02",
+        "d14",
+        0
+      ],
+      [
+        "q02",
+        "d15",
+        0
+      ],
+      [
+        "q02",
+        "d16",
+        0
+      ],
+      [
+        "q02",
+        "d17",
+        0
+      ],
+      [
+        "q02",
+        "d18",
+        0
+      ],
+      [
+        "q02",
+        "d19",
+        0
+      ],
+      [
+        "q02",
+        "d20",
+        0
+      ],
+      [
+        "q03",
+        "d01",
+        0
+      ],
+      [
+        "q03",
+        "d02",
+        1
+      ],
+      [
+        "q03",
+        "d03",
+        1
+      ],
+      [
+        "q03",
+        "d04",
+        0
+      ],
+      [
+        "q03",
+        "d05",
+        0
+      ],
+      [
+        "q03",
+        "d06",
+        0
+      ],
+      [
+        "q03",
+        "d07",
+        0
+      ],
+      [
+        "q03",
+        "d08",
+        0
+      ],
+      [
+        "q03",
+        "d09",
+        0
+      ],
+      [
+        "q03",
+        "d10",
+        0
+      ],
+      [
+        "q03",
+        "d11",
+        0
+      ],
+      [
+        "q03",
+        "d12",
+        0
+      ],
+      [
+        "q03",
+        "d13",
+        0
+      ],
+      [
+        "q03",
+        "d14",
+        0
+      ],
+      [
+        "q03",
+        "d15",
+        0
+      ],
+      [
+        "q03",
+        "d16",
+        0
+      ],
+      [
+        "q03",
+        "d17",
+        0
+      ],
+      [
+        "q03",
+        "d18",
+        0
+      ],
+      [
+        "q03",
+        "d19",
+        0
+      ],
+      [
+        "q03",
+        "d20",
+        0
+      ],
+      [
+        "q04",
+        "d01",
+        0
+      ],
+      [
+        "q04",
+        "d02",
+        0
+      ],
+      [
+        "q04",
+        "d03",
+        0
+      ],
+      [
+        "q04",
+        "d04",
+        0
+      ],
+      [
+        "q04",
+        "d05",
+        0
+      ],
+      [
+        "q04",
+        "d06",
+        0
+      ],
+      [
+        "q04",
+        "d07",
+        1
+      ],
+      [
+        "q04",
+        "d08",
+        0
+      ],
+      [
+        "q04",
+        "d09",
+        0
+      ],
+      [
+        "q04",
+        "d10",
+        0
+      ],
+      [
+        "q04",
+        "d11",
+        0
+      ],
+      [
+        "q04",
+        "d12",
+        0
+      ],
+      [
+        "q04",
+        "d13",
+        0
+      ],
+      [
+        "q04",
+        "d14",
+        0
+      ],
+      [
+        "q04",
+        "d15",
+        0
+      ],
+      [
+        "q04",
+        "d16",
+        0
+      ],
+      [
+        "q04",
+        "d17",
+        0
+      ],
+      [
+        "q04",
+        "d18",
+        0
+      ],
+      [
+        "q04",
+        "d19",
+        0
+      ],
+      [
+        "q04",
+        "d20",
+        0
+      ],
+      [
+        "q05",
+        "d01",
+        0
+      ],
+      [
+        "q05",
+        "d02",
+        0
+      ],
+      [
+        "q05",
+        "d03",
+        0
+      ],
+      [
+        "q05",
+        "d04",
+        0
+      ],
+      [
+        "q05",
+        "d05",
+        1
+      ],
+      [
+        "q05",
+        "d06",
+        0
+      ],
+      [
+        "q05",
+        "d07",
+        0
+      ],
+      [
+        "q05",
+        "d08",
+        0
+      ],
+      [
+        "q05",
+        "d09",
+        0
+      ],
+      [
+        "q05",
+        "d10",
+        0
+      ],
+      [
+        "q05",
+        "d11",
+        0
+      ],
+      [
+        "q05",
+        "d12",
+        0
+      ],
+      [
+        "q05",
+        "d13",
+        0
+      ],
+      [
+        "q05",
+        "d14",
+        0
+      ],
+      [
+        "q05",
+        "d15",
+        0
+      ],
+      [
+        "q05",
+        "d16",
+        0
+      ],
+      [
+        "q05",
+        "d17",
+        0
+      ],
+      [
+        "q05",
+        "d18",
+        0
+      ],
+      [
+        "q05",
+        "d19",
+        0
+      ],
+      [
+        "q05",
+        "d20",
+        0
+      ],
+      [
+        "q06",
+        "d01",
+        0
+      ],
+      [
+        "q06",
+        "d02",
+        0
+      ],
+      [
+        "q06",
+        "d03",
+        0
+      ],
+      [
+        "q06",
+        "d04",
+        0
+      ],
+      [
+        "q06",
+        "d05",
+        0
+      ],
+      [
+        "q06",
+        "d06",
+        0
+      ],
+      [
+        "q06",
+        "d07",
+        0
+      ],
+      [
+        "q06",
+        "d08",
+        0
+      ],
+      [
+        "q06",
+        "d09",
+        0
+      ],
+      [
+        "q06",
+        "d10",
+        0
+      ],
+      [
+        "q06",
+        "d11",
+        0
+      ],
+      [
+        "q06",
+        "d12",
+        0
+      ],
+      [
+        "q06",
+        "d13",
+        0
+      ],
+      [
+        "q06",
+        "d14",
+        1
+      ],
+      [
+        "q06",
+        "d15",
+        0
+      ],
+      [
+        "q06",
+        "d16",
+        0
+      ],
+      [
+        "q06",
+        "d17",
+        0
+      ],
+      [
+        "q06",
+        "d18",
+        0
+      ],
+      [
+        "q06",
+        "d19",
+        0
+      ],
+      [
+        "q06",
+        "d20",
+        0
+      ],
+      [
+        "q07",
+        "d01",
+        0
+      ],
+      [
+        "q07",
+        "d02",
+        0
+      ],
+      [
+        "q07",
+        "d03",
+        0
+      ],
+      [
+        "q07",
+        "d04",
+        0
+      ],
+      [
+        "q07",
+        "d05",
+        0
+      ],
+      [
+        "q07",
+        "d06",
+        0
+      ],
+      [
+        "q07",
+        "d07",
+        0
+      ],
+      [
+        "q07",
+        "d08",
+        0
+      ],
+      [
+        "q07",
+        "d09",
+        0
+      ],
+      [
+        "q07",
+        "d10",
+        0
+      ],
+      [
+        "q07",
+        "d11",
+        0
+      ],
+      [
+        "q07",
+        "d12",
+        0
+      ],
+      [
+        "q07",
+        "d13",
+        0
+      ],
+      [
+        "q07",
+        "d14",
+        0
+      ],
+      [
+        "q07",
+        "d15",
+        0
+      ],
+      [
+        "q07",
+        "d16",
+        0
+      ],
+      [
+        "q07",
+        "d17",
+        0
+      ],
+      [
+        "q07",
+        "d18",
+        1
+      ],
+      [
+        "q07",
+        "d19",
+        1
+      ],
+      [
+        "q07",
+        "d20",
+        0
+      ],
+      [
+        "q08",
+        "d01",
+        0
+      ],
+      [
+        "q08",
+        "d02",
+        0
+      ],
+      [
+        "q08",
+        "d03",
+        0
+      ],
+      [
+        "q08",
+        "d04",
+        0
+      ],
+      [
+        "q08",
+        "d05",
+        0
+      ],
+      [
+        "q08",
+        "d06",
+        0
+      ],
+      [
+        "q08",
+        "d07",
+        0
+      ],
+      [
+        "q08",
+        "d08",
+        0
+      ],
+      [
+        "q08",
+        "d09",
+        0
+      ],
+      [
+        "q08",
+        "d10",
+        0
+      ],
+      [
+        "q08",
+        "d11",
+        0
+      ],
+      [
+        "q08",
+        "d12",
+        0
+      ],
+      [
+        "q08",
+        "d13",
+        0
+      ],
+      [
+        "q08",
+        "d14",
+        0
+      ],
+      [
+        "q08",
+        "d15",
+        0
+      ],
+      [
+        "q08",
+        "d16",
+        0
+      ],
+      [
+        "q08",
+        "d17",
+        0
+      ],
+      [
+        "q08",
+        "d18",
+        0
+      ],
+      [
+        "q08",
+        "d19",
+        0
+      ],
+      [
+        "q08",
+        "d20",
+        0
+      ]
+    ]
+  },
+  "policies": {
+    "metrics": "Recall@k and RR@k per query; macro Recall@k and MRR@k = arithmetic mean over queries with at least one judged-relevant document (same query set and denominator for every method).",
+    "no_judged_relevant": "metrics are null (JSON null / blank CSV), status 'no_judged_relevant'; excluded from macro means; counted in 'no_judged_relevant'. A null is never a zero.",
+    "empty_ranking_for_answerable_query": "scores 0 and stays in the macro denominator.",
+    "unjudged_documents": "contribute zero gain, keep their rank, labeled 'unjudged' (distinct from an explicit 0 judgment, labeled 'nonrelevant').",
+    "ranking_order": "score descending, then doc_id ascending (case-sensitive), applied to the full ranking before truncation to max_k. Scores are comparable only within one method.",
+    "ranking_consistency": "Every first-call, warm-up and measured search must return the same ORDERED document IDs as the untimed quality-pass ranking of that (method, query). A different ordered ID list makes the run incomplete (stage 'consistency', run_failed.json with the diagnostic, no run.json). If the IDs match but scores differ, the run may complete and the differences are reported separately.",
+    "json": "NaN/Infinity are rejected; absent values are null."
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "python_implementation": "CPython",
+    "platform": "Linux-6.18.44-fc-v310-x86_64-with-glibc2.39",
+    "system": "Linux",
+    "machine": "x86_64",
+    "cpu_model": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+    "logical_cpus": 1,
+    "total_ram_bytes": 4184825856,
+    "gpu": "not used (device is cpu); GPU inventory not collected",
+    "thread_env": {
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "torch_threads_observed": 1
+  },
+  "dependencies": {
+    "annotated-doc": "0.0.5",
+    "anyio": "4.16.0",
+    "click": "8.5.1",
+    "cloudpickle": "3.1.2",
+    "filelock": "4.2.9",
+    "fsspec": "2026.9.0",
+    "h11": "0.16.0",
+    "hf-xet": "1.8.0",
+    "httpcore2": "2.16.0",
+    "httpx2": "2.16.0",
+    "huggingface-hub": "2.4.0",
+    "idna": "3.20",
+    "iniconfig": "2.3.1",
+    "jinja2": "3.1.6",
+    "joblib": "1.6.0",
+    "markdown-it-py": "4.2.0",
+    "markupsafe": "3.0.4",
+    "mdurl": "0.1.2",
+    "mpmath": "1.3.0",
+    "narwhals": "2.28.0",
+    "networkx": "3.7",
+    "numpy": "2.5.4",
+    "packaging": "26.3",
+    "pluggy": "1.7.0",
+    "pygments": "2.21.0",
+    "pytest": "9.2.0",
+    "pyyaml": "6.0.3",
+    "rank-bm25": "0.2.2",
+    "regex": "2026.11.7",
+    "retrieval-eval": "0.1.0",
+    "rich": "15.0.0",
+    "safetensors": "0.8.0",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "sentence-transformers": "6.2.0",
+    "setuptools": "84.2.1",
+    "shellingham": "1.5.4",
+    "sympy": "1.14.0",
+    "threadpoolctl": "3.8.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.15.0+cpu",
+    "tqdm": "4.70.1",
+    "transformers": "5.22.2",
+    "truststore": "0.10.5",
+    "typer": "0.28.0",
+    "typing-extensions": "4.16.0"
+  },
+  "code": {
+    "git": {
+      "available": false,
+      "reason": "repository has no commits"
+    },
+    "source_fingerprint": {
+      "sha256": "9a1492eb6ede49ffdab7a58d626c32526c3e435f103d398086c5eeb01500ca1e",
+      "files": [
+        {
+          "path": "pyproject.toml",
+          "sha256": "acf744d09e8763c12d183f3f1fedbd026842eff214ef83bd0df4c881d5ca8aa8"
+        },
+        {
+          "path": "retrieval_eval/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "retrieval_eval/__main__.py",
+          "sha256": "13a1a5b340cdcfc1902b62be90e508c7c71886000d5bf087e7854aadf09fb35e"
+        },
+        {
+          "path": "retrieval_eval/cli.py",
+          "sha256": "84f08ecb975f029f016abd8d1e61e0b72c37df37bc6674a4565d1a33bb6433ee"
+        },
+        {
+          "path": "retrieval_eval/data.py",
+          "sha256": "3d5b36c9a4c9dd561246ae9527e11e377b39c68ec35d3e24ff4bc882e3575e56"
+        },
+        {
+          "path": "retrieval_eval/export.py",
+          "sha256": "8702c18f8567f63dab0675a40409d0f8ff084fa621b7563dd9d7d1cb3561792c"
+        },
+        {
+          "path": "retrieval_eval/metrics.py",
+          "sha256": "ba21622e04aa8efd36fad22299696f8b1f1ad36faac567b0bc077236bc20b36d"
+        },
+        {
+          "path": "retrieval_eval/provenance.py",
+          "sha256": "846f3c41577e2453d21ec332fd4cf0c8a948eea087b269656df447692e231732"
+        },
+        {
+          "path": "retrieval_eval/retrievers.py",
+          "sha256": "af2627050d9887557eaec5fe952de39a96522d8d4f72acbfce04bc19098d8d21"
+        },
+        {
+          "path": "retrieval_eval/runner.py",
+          "sha256": "9741d80ba04160514597edbaaea8eeb44e2166f1d8abbcf980a0cf1dd199ddfe"
+        },
+        {
+          "path": "retrieval_eval/viewer.py",
+          "sha256": "04edb2507b3b90d2da65764880af6c9de5c4988246f4961697f15decbd8fc0e0"
+        },
+        {
+          "path": "uv.lock",
+          "sha256": "e8d2ce96b101279e2ab1f0dc3782819cb283c0c1265a1c76202b8871626dba9b"
+        }
+      ]
+    }
+  },
+  "adapters": {
+    "bm25": {
+      "name": "bm25",
+      "library": "rank-bm25",
+      "library_version": "0.2.2",
+      "variant": "BM25Okapi",
+      "k1": 1.5,
+      "b": 0.75,
+      "epsilon": 0.25,
+      "tokenizer_pattern": "[a-z0-9]+",
+      "tokenizer_normalization": "str.casefold() before matching",
+      "stemming": false,
+      "stop_words": null,
+      "n_documents": 20
+    },
+    "embedding": {
+      "name": "embedding",
+      "encoder": {
+        "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+        "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "device_requested": "cpu",
+        "device_actual": "cpu",
+        "max_seq_length": 256,
+        "dimension": 384,
+        "encode_batch_size": 32,
+        "sentence_transformers_version": "6.2.0",
+        "torch_version": "2.15.0+cpu",
+        "torch_threads": 1
+      },
+      "normalization": "L2, float64, applied to document and query embeddings in the adapter",
+      "search": "exhaustive dot product (= cosine similarity on unit vectors)",
+      "query_cache": false,
+      "n_documents": 20,
+      "dimension": 384,
+      "documents_over_max_seq_length": 0
+    }
+  },
+  "model": {
+    "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "license_reference": {
+      "spdx": "Apache-2.0",
+      "source": "Hugging Face model tag 'license:apache-2.0', observed 2026-11-07 (not re-queried at run time)",
+      "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2"
+    }
+  },
+  "timing_protocol": {
+    "clock": "time.perf_counter_ns",
+    "unit": "ns",
+    "k_searched": 5,
+    "warmup_per_query_method": 3,
+    "measured_per_query_method": 20,
+    "query_order": [
+      "q01",
+      "q02",
+      "q03",
+      "q04",
+      "q05",
+      "q06",
+      "q07",
+      "q08"
+    ],
+    "method_order_rule": "Per query: warm-up calls first, always in listed method order [bm25, embedding] and discarded; then measured repetitions. In measured repetition i (0-based) the methods run in the listed order rotated left by (i mod 2), i.e. the first method alternates each repetition.",
+    "timed_region": "raw query text in -> ranked (doc_id, score) list out: query tokenization/encoding, scoring, ordering and top-k, as implemented inside retriever.search().",
+    "excluded_from_timing": [
+      "data reading",
+      "metric computation",
+      "disk writing",
+      "document text lookup",
+      "result validation/comparison",
+      "UI"
+    ],
+    "serial": true,
+    "concurrent_methods": false,
+    "query_cache": false,
+    "threads": {
+      "requested": 1,
+      "env": {
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1"
+      },
+      "torch_observed": 1
+    },
+    "median": "middle value of the sorted sample; mean of the two middle values when the count is even",
+    "p95": "nearest rank: sorted value at 1-based rank ceil(0.95 * n)",
+    "overall_summary": "pools all measured calls of one method (equal repetitions per query)",
+    "caveats": "warm, local, serial microbenchmark observations on one machine. Repeated calls of the same query are not independent samples and are not evidence of statistical significance. No latency target.",
+    "gc": "garbage collection not modified"
+  },
+  "ranking_consistency": {
+    "rule": "Every first-call, warm-up and measured search must return the same ORDERED document IDs as the untimed quality-pass ranking of that (method, query). A different ordered ID list makes the run incomplete (stage 'consistency', run_failed.json with the diagnostic, no run.json). If the IDs match but scores differ, the run may complete and the differences are reported separately.",
+    "calls_checked": 370,
+    "ranking_disagreements": 0,
+    "score_only_differences": 0,
+    "max_abs_score_difference": 0.0
+  },
+  "setup_observations": {
+    "bm25": {
+      "bm25_index_build_ns": 2511412
+    },
+    "embedding": {
+      "library_import_ns": 24233809244,
+      "model_cache_state_before_run": "verified_complete",
+      "model_cache_verification": {
+        "method": "presence and exact byte size of every file selected by the download patterns, against a table recorded for the pinned revision; not a content hash",
+        "files_expected": 11,
+        "state": "verified_complete",
+        "snapshot_dir_name": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "files_present_with_expected_size": 11,
+        "missing": [],
+        "size_mismatch": []
+      },
+      "model_snapshot_fetch_ns": 65186962,
+      "model_snapshot_fetch_may_include_download": false,
+      "model_snapshot_fetch_note": "all selected files were verified present before the fetch; the fetch was a local resolution check",
+      "model_load_ns": 2869625451,
+      "document_embedding_index_build_ns": 3997344011,
+      "torch_threads_observed": 1
+    }
+  },
+  "first_call_observations": [
+    {
+      "method": "bm25",
+      "query_id": "q01",
+      "k": 5,
+      "elapsed_ns": 140143,
+      "note": "first retrieval call after this method's index build; not a cold-machine or cold-download measurement"
+    },
+    {
+      "method": "embedding",
+      "query_id": "q01",
+      "k": 5,
+      "elapsed_ns": 17445119,
+      "note": "first retrieval call after this method's index build; not a cold-machine or cold-download measurement"
+    }
+  ],
+  "latency": {
+    "unit": "ns",
+    "samples": [
+      {
+        "method": "bm25",
+        "query_id": "q01",
+        "repetition": 1,
+        "execution_index": 1,
+        "position_in_pair": 1,
+        "elapsed_ns": 71363
+      },
+      {
+        "method": "embedding",
+        "query_id": "q01",
+        "repetition": 1,
+        "execution_index": 2,
+        "position_in_pair": 2,
+        "elapsed_ns": 11946202
+      },
+      {
+        "method": "embedding",
+        "query_id": "q01",
+        "repetition": 2,
+        "execution_index": 3,
+        "position_in_pair": 1,
+        "elapsed_ns": 11340758
+      },
+      {
+        "method": "bm25",
+        "query_id": "q01",
+        "repetition": 2,
+        "execution_index": 4,
+        "position_in_pair": 2,
+        "elapsed_ns": 68260
+      },
+      {
+        "method": "bm25",
+        "query_id": "q01",
+        "repetition": 3,
+        "execution_index": 5,
+        "position_in_pair": 1,
+        "elapsed_ns": 39759
+      },
+      {
+        "method": "embedding",
+        "query_id": "q01",
+        "repetition": 3,
+        "execution_index": 6,
+        "position_in_pair": 2,
+        "elapsed_ns": 11447311
+      },
+      {
+        "method": "embedding",
+        "query_id": "q01",
+        "repetition": 4,
+        "execution_index": 7,
+        "position_in_pair": 1,
+        "elapsed_ns": 11530645
+      },
+      {
+        "method": "bm25",
+        "query_id": "q01",
+        "repetition": 4,
+        "execution_index": 8,
+        "position_in_pair": 2,
+        "elapsed_ns": 68422
+      },
+      {
+        "method": "bm25",
+        "query_id": "q01",
+        "repetition": 5,
+        "execution_index": 9,
+        "position_in_pair": 1,
+        "elapsed_ns": 40743
+      },
+      {
+        "method": "embedding",
+        "query_id": "q01",
+        "repetition": 5,
+        "execution_index": 10,
+        "position_in_pair": 2,
+        "elapsed_ns": 11463080
+      },
+      {
+        "method": "embedding",
+        "query_id": "q01",
+        "repetition": 6,
+        "execution_index": 11,
+        "position_in_pair": 1,
+        "elapsed_ns": 11478849
+      },
+      {
+        "method": "bm25",
+        "query_id": "q01",
+        "repetition": 6,
+        "execution_index": 12,
+        "position_in_pair": 2,
+        "elapsed_ns": 127897
+      },
+      {
+        "method": "bm25",
+        "query_id": "q01",
+        "repetition": 7,
+        "execution_index": 13,
+        "position_in_pair": 1,
+        "elapsed_ns": 48998
+      },
+      {
+        "method": "embedding",
+        "query_id": "q01",
+        "repetition": 7,
+        "execution_index": 14,
+        "position_in_pair": 2,
+        "elapsed_ns": 11392300
+      },
+      {
+        "method": "embedding",
+        "query_id": "q01",
+        "repetition": 8,
+        "execution_index": 15,
+        "position_in_pair": 1,
+        "elapsed_ns": 11362733
+      },
+      {
+        "method": "bm25",
+        "query_id": "q01",
+        "repetition": 8,
+        "execution_index": 16,
+        "position_in_pair": 2,
+        "elapsed_ns": 135393
+      },
+      {
+        "method": "bm25",
+        "query_id": "q01",
+        "repetition": 9,
+        "execution_index": 17,
+        "position_in_pair": 1,
+        "elapsed_ns": 48502
+      },
+      {
+        "method": "embedding",
+        "query_id": "q01",
+        "repetition": 9,
+        "execution_index": 18,
+        "position_in_pair": 2,
+        "elapsed_ns": 11624179
+      },
+      {
+        "method": "embedding",
+        "query_id": "q01",
+        "repetition": 10,
+        "execution_index": 19,
+        "position_in_pair": 1,
+        "elapsed_ns": 11557521
+      },
+      {
+        "method": "bm25",
+        "query_id": "q01",
+        "repetition": 10,
+        "execution_index": 20,
+        "position_in_pair": 2,
+        "elapsed_ns": 70007
+      },
+      {
+        "method": "bm25",
+        "query_id": "q01",
+        "repetition": 11,
+        "execution_index": 21,
+        "position_in_pair": 1,
+        "elapsed_ns": 44049
+      },
+      {
+        "method": "embedding",
+        "query_id": "q01",
+        "repetition": 11,
+        "execution_index": 22,
+        "position_in_pair": 2,
+        "elapsed_ns": 11376472
+      },
+      {
+        "method": "embedding",
+        "query_id": "q01",
+        "repetition": 12,
+        "execution_index": 23,
+        "position_in_pair": 1,
+        "elapsed_ns": 11450960
+      },
+      {
+        "method": "bm25",
+        "query_id": "q01",
+        "repetition": 12,
+        "execution_index": 24,
+        "position_in_pair": 2,
+        "elapsed_ns": 87097
+      },
+      {
+        "method": "bm25",
+        "query_id": "q01",
+        "repetition": 13,
+        "execution_index": 25,
+        "position_in_pair": 1,
+        "elapsed_ns": 43298
+      },
+      {
+        "method": "embedding",
+        "query_id": "q01",
+        "repetition": 13,
+        "execution_index": 26,
+        "position_in_pair": 2,
+        "elapsed_ns": 11376974
+      },
+      {
+        "method": "embedding",
+        "query_id": "q01",
+        "repetition": 14,
+        "execution_index": 27,
+        "position_in_pair": 1,
+        "elapsed_ns": 11504226
+      },
+      {
+        "method": "bm25",
+        "query_id": "q01",
+        "repetition": 14,
+        "execution_index": 28,
+        "position_in_pair": 2,
+        "elapsed_ns": 76261
+      },
+      {
+        "method": "bm25",
+        "query_id": "q01",
+        "repetition": 15,
+        "execution_index": 29,
+        "position_in_pair": 1,
+        "elapsed_ns": 42134
+      },
+      {
+        "method": "embedding",
+        "query_id": "q01",
+        "repetition": 15,
+        "execution_index": 30,
+        "position_in_pair": 2,
+        "elapsed_ns": 11327631
+      },
+      {
+        "method": "embedding",
+        "query_id": "q01",
+        "repetition": 16,
+        "execution_index": 31,
+        "position_in_pair": 1,
+        "elapsed_ns": 12003725
+      },
+      {
+        "method": "bm25",
+        "query_id": "q01",
+        "repetition": 16,
+        "execution_index": 32,
+        "position_in_pair": 2,
+        "elapsed_ns": 72612
+      },
+      {
+        "method": "bm25",
+        "query_id": "q01",
+        "repetition": 17,
+        "execution_index": 33,
+        "position_in_pair": 1,
+        "elapsed_ns": 42777
+      },
+      {
+        "method": "embedding",
+        "query_id": "q01",
+        "repetition": 17,
+        "execution_index": 34,
+        "position_in_pair": 2,
+        "elapsed_ns": 11688543
+      },
+      {
+        "method": "embedding",
+        "query_id": "q01",
+        "repetition": 18,
+        "execution_index": 35,
+        "position_in_pair": 1,
+        "elapsed_ns": 11684762
+      },
+      {
+        "method": "bm25",
+        "query_id": "q01",
+        "repetition": 18,
+        "execution_index": 36,
+        "position_in_pair": 2,
+        "elapsed_ns": 70543
+      },
+      {
+        "method": "bm25",
+        "query_id": "q01",
+        "repetition": 19,
+        "execution_index": 37,
+        "position_in_pair": 1,
+        "elapsed_ns": 40867
+      },
+      {
+        "method": "embedding",
+        "query_id": "q01",
+        "repetition": 19,
+        "execution_index": 38,
+        "position_in_pair": 2,
+        "elapsed_ns": 11751253
+      },
+      {
+        "method": "embedding",
+        "query_id": "q01",
+        "repetition": 20,
+        "execution_index": 39,
+        "position_in_pair": 1,
+        "elapsed_ns": 11591997
+      },
+      {
+        "method": "bm25",
+        "query_id": "q01",
+        "repetition": 20,
+        "execution_index": 40,
+        "position_in_pair": 2,
+        "elapsed_ns": 74527
+      },
+      {
+        "method": "bm25",
+        "query_id": "q02",
+        "repetition": 1,
+        "execution_index": 41,
+        "position_in_pair": 1,
+        "elapsed_ns": 145363
+      },
+      {
+        "method": "embedding",
+        "query_id": "q02",
+        "repetition": 1,
+        "execution_index": 42,
+        "position_in_pair": 2,
+        "elapsed_ns": 13743039
+      },
+      {
+        "method": "embedding",
+        "query_id": "q02",
+        "repetition": 2,
+        "execution_index": 43,
+        "position_in_pair": 1,
+        "elapsed_ns": 13754614
+      },
+      {
+        "method": "bm25",
+        "query_id": "q02",
+        "repetition": 2,
+        "execution_index": 44,
+        "position_in_pair": 2,
+        "elapsed_ns": 187536
+      },
+      {
+        "method": "bm25",
+        "query_id": "q02",
+        "repetition": 3,
+        "execution_index": 45,
+        "position_in_pair": 1,
+        "elapsed_ns": 110532
+      },
+      {
+        "method": "embedding",
+        "query_id": "q02",
+        "repetition": 3,
+        "execution_index": 46,
+        "position_in_pair": 2,
+        "elapsed_ns": 13526538
+      },
+      {
+        "method": "embedding",
+        "query_id": "q02",
+        "repetition": 4,
+        "execution_index": 47,
+        "position_in_pair": 1,
+        "elapsed_ns": 13313051
+      },
+      {
+        "method": "bm25",
+        "query_id": "q02",
+        "repetition": 4,
+        "execution_index": 48,
+        "position_in_pair": 2,
+        "elapsed_ns": 141495
+      },
+      {
+        "method": "bm25",
+        "query_id": "q02",
+        "repetition": 5,
+        "execution_index": 49,
+        "position_in_pair": 1,
+        "elapsed_ns": 99278
+      },
+      {
+        "method": "embedding",
+        "query_id": "q02",
+        "repetition": 5,
+        "execution_index": 50,
+        "position_in_pair": 2,
+        "elapsed_ns": 13194859
+      },
+      {
+        "method": "embedding",
+        "query_id": "q02",
+        "repetition": 6,
+        "execution_index": 51,
+        "position_in_pair": 1,
+        "elapsed_ns": 13107756
+      },
+      {
+        "method": "bm25",
+        "query_id": "q02",
+        "repetition": 6,
+        "execution_index": 52,
+        "position_in_pair": 2,
+        "elapsed_ns": 140163
+      },
+      {
+        "method": "bm25",
+        "query_id": "q02",
+        "repetition": 7,
+        "execution_index": 53,
+        "position_in_pair": 1,
+        "elapsed_ns": 99902
+      },
+      {
+        "method": "embedding",
+        "query_id": "q02",
+        "repetition": 7,
+        "execution_index": 54,
+        "position_in_pair": 2,
+        "elapsed_ns": 13128986
+      },
+      {
+        "method": "embedding",
+        "query_id": "q02",
+        "repetition": 8,
+        "execution_index": 55,
+        "position_in_pair": 1,
+        "elapsed_ns": 13067605
+      },
+      {
+        "method": "bm25",
+        "query_id": "q02",
+        "repetition": 8,
+        "execution_index": 56,
+        "position_in_pair": 2,
+        "elapsed_ns": 139578
+      },
+      {
+        "method": "bm25",
+        "query_id": "q02",
+        "repetition": 9,
+        "execution_index": 57,
+        "position_in_pair": 1,
+        "elapsed_ns": 98898
+      },
+      {
+        "method": "embedding",
+        "query_id": "q02",
+        "repetition": 9,
+        "execution_index": 58,
+        "position_in_pair": 2,
+        "elapsed_ns": 12978860
+      },
+      {
+        "method": "embedding",
+        "query_id": "q02",
+        "repetition": 10,
+        "execution_index": 59,
+        "position_in_pair": 1,
+        "elapsed_ns": 12932560
+      },
+      {
+        "method": "bm25",
+        "query_id": "q02",
+        "repetition": 10,
+        "execution_index": 60,
+        "position_in_pair": 2,
+        "elapsed_ns": 201776
+      },
+      {
+        "method": "bm25",
+        "query_id": "q02",
+        "repetition": 11,
+        "execution_index": 61,
+        "position_in_pair": 1,
+        "elapsed_ns": 105831
+      },
+      {
+        "method": "embedding",
+        "query_id": "q02",
+        "repetition": 11,
+        "execution_index": 62,
+        "position_in_pair": 2,
+        "elapsed_ns": 13031539
+      },
+      {
+        "method": "embedding",
+        "query_id": "q02",
+        "repetition": 12,
+        "execution_index": 63,
+        "position_in_pair": 1,
+        "elapsed_ns": 13815360
+      },
+      {
+        "method": "bm25",
+        "query_id": "q02",
+        "repetition": 12,
+        "execution_index": 64,
+        "position_in_pair": 2,
+        "elapsed_ns": 141923
+      },
+      {
+        "method": "bm25",
+        "query_id": "q02",
+        "repetition": 13,
+        "execution_index": 65,
+        "position_in_pair": 1,
+        "elapsed_ns": 99058
+      },
+      {
+        "method": "embedding",
+        "query_id": "q02",
+        "repetition": 13,
+        "execution_index": 66,
+        "position_in_pair": 2,
+        "elapsed_ns": 14207698
+      },
+      {
+        "method": "embedding",
+        "query_id": "q02",
+        "repetition": 14,
+        "execution_index": 67,
+        "position_in_pair": 1,
+        "elapsed_ns": 14019551
+      },
+      {
+        "method": "bm25",
+        "query_id": "q02",
+        "repetition": 14,
+        "execution_index": 68,
+        "position_in_pair": 2,
+        "elapsed_ns": 139112
+      },
+      {
+        "method": "bm25",
+        "query_id": "q02",
+        "repetition": 15,
+        "execution_index": 69,
+        "position_in_pair": 1,
+        "elapsed_ns": 97035
+      },
+      {
+        "method": "embedding",
+        "query_id": "q02",
+        "repetition": 15,
+        "execution_index": 70,
+        "position_in_pair": 2,
+        "elapsed_ns": 14109889
+      },
+      {
+        "method": "embedding",
+        "query_id": "q02",
+        "repetition": 16,
+        "execution_index": 71,
+        "position_in_pair": 1,
+        "elapsed_ns": 14586319
+      },
+      {
+        "method": "bm25",
+        "query_id": "q02",
+        "repetition": 16,
+        "execution_index": 72,
+        "position_in_pair": 2,
+        "elapsed_ns": 140594
+      },
+      {
+        "method": "bm25",
+        "query_id": "q02",
+        "repetition": 17,
+        "execution_index": 73,
+        "position_in_pair": 1,
+        "elapsed_ns": 100611
+      },
+      {
+        "method": "embedding",
+        "query_id": "q02",
+        "repetition": 17,
+        "execution_index": 74,
+        "position_in_pair": 2,
+        "elapsed_ns": 13965739
+      },
+      {
+        "method": "embedding",
+        "query_id": "q02",
+        "repetition": 18,
+        "execution_index": 75,
+        "position_in_pair": 1,
+        "elapsed_ns": 14160980
+      },
+      {
+        "method": "bm25",
+        "query_id": "q02",
+        "repetition": 18,
+        "execution_index": 76,
+        "position_in_pair": 2,
+        "elapsed_ns": 141821
+      },
+      {
+        "method": "bm25",
+        "query_id": "q02",
+        "repetition": 19,
+        "execution_index": 77,
+        "position_in_pair": 1,
+        "elapsed_ns": 100854
+      },
+      {
+        "method": "embedding",
+        "query_id": "q02",
+        "repetition": 19,
+        "execution_index": 78,
+        "position_in_pair": 2,
+        "elapsed_ns": 14247554
+      },
+      {
+        "method": "embedding",
+        "query_id": "q02",
+        "repetition": 20,
+        "execution_index": 79,
+        "position_in_pair": 1,
+        "elapsed_ns": 14316102
+      },
+      {
+        "method": "bm25",
+        "query_id": "q02",
+        "repetition": 20,
+        "execution_index": 80,
+        "position_in_pair": 2,
+        "elapsed_ns": 161570
+      },
+      {
+        "method": "bm25",
+        "query_id": "q03",
+        "repetition": 1,
+        "execution_index": 81,
+        "position_in_pair": 1,
+        "elapsed_ns": 148721
+      },
+      {
+        "method": "embedding",
+        "query_id": "q03",
+        "repetition": 1,
+        "execution_index": 82,
+        "position_in_pair": 2,
+        "elapsed_ns": 10402384
+      },
+      {
+        "method": "embedding",
+        "query_id": "q03",
+        "repetition": 2,
+        "execution_index": 83,
+        "position_in_pair": 1,
+        "elapsed_ns": 10399772
+      },
+      {
+        "method": "bm25",
+        "query_id": "q03",
+        "repetition": 2,
+        "execution_index": 84,
+        "position_in_pair": 2,
+        "elapsed_ns": 147602
+      },
+      {
+        "method": "bm25",
+        "query_id": "q03",
+        "repetition": 3,
+        "execution_index": 85,
+        "position_in_pair": 1,
+        "elapsed_ns": 71843
+      },
+      {
+        "method": "embedding",
+        "query_id": "q03",
+        "repetition": 3,
+        "execution_index": 86,
+        "position_in_pair": 2,
+        "elapsed_ns": 10389161
+      },
+      {
+        "method": "embedding",
+        "query_id": "q03",
+        "repetition": 4,
+        "execution_index": 87,
+        "position_in_pair": 1,
+        "elapsed_ns": 10492083
+      },
+      {
+        "method": "bm25",
+        "query_id": "q03",
+        "repetition": 4,
+        "execution_index": 88,
+        "position_in_pair": 2,
+        "elapsed_ns": 100298
+      },
+      {
+        "method": "bm25",
+        "query_id": "q03",
+        "repetition": 5,
+        "execution_index": 89,
+        "position_in_pair": 1,
+        "elapsed_ns": 65068
+      },
+      {
+        "method": "embedding",
+        "query_id": "q03",
+        "repetition": 5,
+        "execution_index": 90,
+        "position_in_pair": 2,
+        "elapsed_ns": 10290037
+      },
+      {
+        "method": "embedding",
+        "query_id": "q03",
+        "repetition": 6,
+        "execution_index": 91,
+        "position_in_pair": 1,
+        "elapsed_ns": 10230837
+      },
+      {
+        "method": "bm25",
+        "query_id": "q03",
+        "repetition": 6,
+        "execution_index": 92,
+        "position_in_pair": 2,
+        "elapsed_ns": 101274
+      },
+      {
+        "method": "bm25",
+        "query_id": "q03",
+        "repetition": 7,
+        "execution_index": 93,
+        "position_in_pair": 1,
+        "elapsed_ns": 119748
+      },
+      {
+        "method": "embedding",
+        "query_id": "q03",
+        "repetition": 7,
+        "execution_index": 94,
+        "position_in_pair": 2,
+        "elapsed_ns": 10185625
+      },
+      {
+        "method": "embedding",
+        "query_id": "q03",
+        "repetition": 8,
+        "execution_index": 95,
+        "position_in_pair": 1,
+        "elapsed_ns": 10474037
+      },
+      {
+        "method": "bm25",
+        "query_id": "q03",
+        "repetition": 8,
+        "execution_index": 96,
+        "position_in_pair": 2,
+        "elapsed_ns": 97987
+      },
+      {
+        "method": "bm25",
+        "query_id": "q03",
+        "repetition": 9,
+        "execution_index": 97,
+        "position_in_pair": 1,
+        "elapsed_ns": 109689
+      },
+      {
+        "method": "embedding",
+        "query_id": "q03",
+        "repetition": 9,
+        "execution_index": 98,
+        "position_in_pair": 2,
+        "elapsed_ns": 10351162
+      },
+      {
+        "method": "embedding",
+        "query_id": "q03",
+        "repetition": 10,
+        "execution_index": 99,
+        "position_in_pair": 1,
+        "elapsed_ns": 10213959
+      },
+      {
+        "method": "bm25",
+        "query_id": "q03",
+        "repetition": 10,
+        "execution_index": 100,
+        "position_in_pair": 2,
+        "elapsed_ns": 99515
+      },
+      {
+        "method": "bm25",
+        "query_id": "q03",
+        "repetition": 11,
+        "execution_index": 101,
+        "position_in_pair": 1,
+        "elapsed_ns": 65048
+      },
+      {
+        "method": "embedding",
+        "query_id": "q03",
+        "repetition": 11,
+        "execution_index": 102,
+        "position_in_pair": 2,
+        "elapsed_ns": 10326532
+      },
+      {
+        "method": "embedding",
+        "query_id": "q03",
+        "repetition": 12,
+        "execution_index": 103,
+        "position_in_pair": 1,
+        "elapsed_ns": 10262448
+      },
+      {
+        "method": "bm25",
+        "query_id": "q03",
+        "repetition": 12,
+        "execution_index": 104,
+        "position_in_pair": 2,
+        "elapsed_ns": 119257
+      },
+      {
+        "method": "bm25",
+        "query_id": "q03",
+        "repetition": 13,
+        "execution_index": 105,
+        "position_in_pair": 1,
+        "elapsed_ns": 68103
+      },
+      {
+        "method": "embedding",
+        "query_id": "q03",
+        "repetition": 13,
+        "execution_index": 106,
+        "position_in_pair": 2,
+        "elapsed_ns": 10484909
+      },
+      {
+        "method": "embedding",
+        "query_id": "q03",
+        "repetition": 14,
+        "execution_index": 107,
+        "position_in_pair": 1,
+        "elapsed_ns": 10510913
+      },
+      {
+        "method": "bm25",
+        "query_id": "q03",
+        "repetition": 14,
+        "execution_index": 108,
+        "position_in_pair": 2,
+        "elapsed_ns": 89555
+      },
+      {
+        "method": "bm25",
+        "query_id": "q03",
+        "repetition": 15,
+        "execution_index": 109,
+        "position_in_pair": 1,
+        "elapsed_ns": 55864
+      },
+      {
+        "method": "embedding",
+        "query_id": "q03",
+        "repetition": 15,
+        "execution_index": 110,
+        "position_in_pair": 2,
+        "elapsed_ns": 11376143
+      },
+      {
+        "method": "embedding",
+        "query_id": "q03",
+        "repetition": 16,
+        "execution_index": 111,
+        "position_in_pair": 1,
+        "elapsed_ns": 10470546
+      },
+      {
+        "method": "bm25",
+        "query_id": "q03",
+        "repetition": 16,
+        "execution_index": 112,
+        "position_in_pair": 2,
+        "elapsed_ns": 93320
+      },
+      {
+        "method": "bm25",
+        "query_id": "q03",
+        "repetition": 17,
+        "execution_index": 113,
+        "position_in_pair": 1,
+        "elapsed_ns": 176643
+      },
+      {
+        "method": "embedding",
+        "query_id": "q03",
+        "repetition": 17,
+        "execution_index": 114,
+        "position_in_pair": 2,
+        "elapsed_ns": 11079334
+      },
+      {
+        "method": "embedding",
+        "query_id": "q03",
+        "repetition": 18,
+        "execution_index": 115,
+        "position_in_pair": 1,
+        "elapsed_ns": 10673281
+      },
+      {
+        "method": "bm25",
+        "query_id": "q03",
+        "repetition": 18,
+        "execution_index": 116,
+        "position_in_pair": 2,
+        "elapsed_ns": 151929
+      },
+      {
+        "method": "bm25",
+        "query_id": "q03",
+        "repetition": 19,
+        "execution_index": 117,
+        "position_in_pair": 1,
+        "elapsed_ns": 59946
+      },
+      {
+        "method": "embedding",
+        "query_id": "q03",
+        "repetition": 19,
+        "execution_index": 118,
+        "position_in_pair": 2,
+        "elapsed_ns": 10120710
+      },
+      {
+        "method": "embedding",
+        "query_id": "q03",
+        "repetition": 20,
+        "execution_index": 119,
+        "position_in_pair": 1,
+        "elapsed_ns": 10451000
+      },
+      {
+        "method": "bm25",
+        "query_id": "q03",
+        "repetition": 20,
+        "execution_index": 120,
+        "position_in_pair": 2,
+        "elapsed_ns": 92199
+      },
+      {
+        "method": "bm25",
+        "query_id": "q04",
+        "repetition": 1,
+        "execution_index": 121,
+        "position_in_pair": 1,
+        "elapsed_ns": 94656
+      },
+      {
+        "method": "embedding",
+        "query_id": "q04",
+        "repetition": 1,
+        "execution_index": 122,
+        "position_in_pair": 2,
+        "elapsed_ns": 10783553
+      },
+      {
+        "method": "embedding",
+        "query_id": "q04",
+        "repetition": 2,
+        "execution_index": 123,
+        "position_in_pair": 1,
+        "elapsed_ns": 11260534
+      },
+      {
+        "method": "bm25",
+        "query_id": "q04",
+        "repetition": 2,
+        "execution_index": 124,
+        "position_in_pair": 2,
+        "elapsed_ns": 121280
+      },
+      {
+        "method": "bm25",
+        "query_id": "q04",
+        "repetition": 3,
+        "execution_index": 125,
+        "position_in_pair": 1,
+        "elapsed_ns": 93621
+      },
+      {
+        "method": "embedding",
+        "query_id": "q04",
+        "repetition": 3,
+        "execution_index": 126,
+        "position_in_pair": 2,
+        "elapsed_ns": 10960213
+      },
+      {
+        "method": "embedding",
+        "query_id": "q04",
+        "repetition": 4,
+        "execution_index": 127,
+        "position_in_pair": 1,
+        "elapsed_ns": 11352801
+      },
+      {
+        "method": "bm25",
+        "query_id": "q04",
+        "repetition": 4,
+        "execution_index": 128,
+        "position_in_pair": 2,
+        "elapsed_ns": 100351
+      },
+      {
+        "method": "bm25",
+        "query_id": "q04",
+        "repetition": 5,
+        "execution_index": 129,
+        "position_in_pair": 1,
+        "elapsed_ns": 64030
+      },
+      {
+        "method": "embedding",
+        "query_id": "q04",
+        "repetition": 5,
+        "execution_index": 130,
+        "position_in_pair": 2,
+        "elapsed_ns": 10671532
+      },
+      {
+        "method": "embedding",
+        "query_id": "q04",
+        "repetition": 6,
+        "execution_index": 131,
+        "position_in_pair": 1,
+        "elapsed_ns": 10652986
+      },
+      {
+        "method": "bm25",
+        "query_id": "q04",
+        "repetition": 6,
+        "execution_index": 132,
+        "position_in_pair": 2,
+        "elapsed_ns": 98032
+      },
+      {
+        "method": "bm25",
+        "query_id": "q04",
+        "repetition": 7,
+        "execution_index": 133,
+        "position_in_pair": 1,
+        "elapsed_ns": 65788
+      },
+      {
+        "method": "embedding",
+        "query_id": "q04",
+        "repetition": 7,
+        "execution_index": 134,
+        "position_in_pair": 2,
+        "elapsed_ns": 11057992
+      },
+      {
+        "method": "embedding",
+        "query_id": "q04",
+        "repetition": 8,
+        "execution_index": 135,
+        "position_in_pair": 1,
+        "elapsed_ns": 10639377
+      },
+      {
+        "method": "bm25",
+        "query_id": "q04",
+        "repetition": 8,
+        "execution_index": 136,
+        "position_in_pair": 2,
+        "elapsed_ns": 111862
+      },
+      {
+        "method": "bm25",
+        "query_id": "q04",
+        "repetition": 9,
+        "execution_index": 137,
+        "position_in_pair": 1,
+        "elapsed_ns": 89028
+      },
+      {
+        "method": "embedding",
+        "query_id": "q04",
+        "repetition": 9,
+        "execution_index": 138,
+        "position_in_pair": 2,
+        "elapsed_ns": 10939751
+      },
+      {
+        "method": "embedding",
+        "query_id": "q04",
+        "repetition": 10,
+        "execution_index": 139,
+        "position_in_pair": 1,
+        "elapsed_ns": 10791601
+      },
+      {
+        "method": "bm25",
+        "query_id": "q04",
+        "repetition": 10,
+        "execution_index": 140,
+        "position_in_pair": 2,
+        "elapsed_ns": 99178
+      },
+      {
+        "method": "bm25",
+        "query_id": "q04",
+        "repetition": 11,
+        "execution_index": 141,
+        "position_in_pair": 1,
+        "elapsed_ns": 64591
+      },
+      {
+        "method": "embedding",
+        "query_id": "q04",
+        "repetition": 11,
+        "execution_index": 142,
+        "position_in_pair": 2,
+        "elapsed_ns": 11524092
+      },
+      {
+        "method": "embedding",
+        "query_id": "q04",
+        "repetition": 12,
+        "execution_index": 143,
+        "position_in_pair": 1,
+        "elapsed_ns": 11075634
+      },
+      {
+        "method": "bm25",
+        "query_id": "q04",
+        "repetition": 12,
+        "execution_index": 144,
+        "position_in_pair": 2,
+        "elapsed_ns": 99156
+      },
+      {
+        "method": "bm25",
+        "query_id": "q04",
+        "repetition": 13,
+        "execution_index": 145,
+        "position_in_pair": 1,
+        "elapsed_ns": 65173
+      },
+      {
+        "method": "embedding",
+        "query_id": "q04",
+        "repetition": 13,
+        "execution_index": 146,
+        "position_in_pair": 2,
+        "elapsed_ns": 10780662
+      },
+      {
+        "method": "embedding",
+        "query_id": "q04",
+        "repetition": 14,
+        "execution_index": 147,
+        "position_in_pair": 1,
+        "elapsed_ns": 10820637
+      },
+      {
+        "method": "bm25",
+        "query_id": "q04",
+        "repetition": 14,
+        "execution_index": 148,
+        "position_in_pair": 2,
+        "elapsed_ns": 160195
+      },
+      {
+        "method": "bm25",
+        "query_id": "q04",
+        "repetition": 15,
+        "execution_index": 149,
+        "position_in_pair": 1,
+        "elapsed_ns": 73841
+      },
+      {
+        "method": "embedding",
+        "query_id": "q04",
+        "repetition": 15,
+        "execution_index": 150,
+        "position_in_pair": 2,
+        "elapsed_ns": 11547738
+      },
+      {
+        "method": "embedding",
+        "query_id": "q04",
+        "repetition": 16,
+        "execution_index": 151,
+        "position_in_pair": 1,
+        "elapsed_ns": 16938333
+      },
+      {
+        "method": "bm25",
+        "query_id": "q04",
+        "repetition": 16,
+        "execution_index": 152,
+        "position_in_pair": 2,
+        "elapsed_ns": 157932
+      },
+      {
+        "method": "bm25",
+        "query_id": "q04",
+        "repetition": 17,
+        "execution_index": 153,
+        "position_in_pair": 1,
+        "elapsed_ns": 103812
+      },
+      {
+        "method": "embedding",
+        "query_id": "q04",
+        "repetition": 17,
+        "execution_index": 154,
+        "position_in_pair": 2,
+        "elapsed_ns": 13398634
+      },
+      {
+        "method": "embedding",
+        "query_id": "q04",
+        "repetition": 18,
+        "execution_index": 155,
+        "position_in_pair": 1,
+        "elapsed_ns": 12856013
+      },
+      {
+        "method": "bm25",
+        "query_id": "q04",
+        "repetition": 18,
+        "execution_index": 156,
+        "position_in_pair": 2,
+        "elapsed_ns": 147966
+      },
+      {
+        "method": "bm25",
+        "query_id": "q04",
+        "repetition": 19,
+        "execution_index": 157,
+        "position_in_pair": 1,
+        "elapsed_ns": 119324
+      },
+      {
+        "method": "embedding",
+        "query_id": "q04",
+        "repetition": 19,
+        "execution_index": 158,
+        "position_in_pair": 2,
+        "elapsed_ns": 13497176
+      },
+      {
+        "method": "embedding",
+        "query_id": "q04",
+        "repetition": 20,
+        "execution_index": 159,
+        "position_in_pair": 1,
+        "elapsed_ns": 12821752
+      },
+      {
+        "method": "bm25",
+        "query_id": "q04",
+        "repetition": 20,
+        "execution_index": 160,
+        "position_in_pair": 2,
+        "elapsed_ns": 141603
+      },
+      {
+        "method": "bm25",
+        "query_id": "q05",
+        "repetition": 1,
+        "execution_index": 161,
+        "position_in_pair": 1,
+        "elapsed_ns": 144422
+      },
+      {
+        "method": "embedding",
+        "query_id": "q05",
+        "repetition": 1,
+        "execution_index": 162,
+        "position_in_pair": 2,
+        "elapsed_ns": 14167124
+      },
+      {
+        "method": "embedding",
+        "query_id": "q05",
+        "repetition": 2,
+        "execution_index": 163,
+        "position_in_pair": 1,
+        "elapsed_ns": 13053878
+      },
+      {
+        "method": "bm25",
+        "query_id": "q05",
+        "repetition": 2,
+        "execution_index": 164,
+        "position_in_pair": 2,
+        "elapsed_ns": 202658
+      },
+      {
+        "method": "bm25",
+        "query_id": "q05",
+        "repetition": 3,
+        "execution_index": 165,
+        "position_in_pair": 1,
+        "elapsed_ns": 99664
+      },
+      {
+        "method": "embedding",
+        "query_id": "q05",
+        "repetition": 3,
+        "execution_index": 166,
+        "position_in_pair": 2,
+        "elapsed_ns": 11977495
+      },
+      {
+        "method": "embedding",
+        "query_id": "q05",
+        "repetition": 4,
+        "execution_index": 167,
+        "position_in_pair": 1,
+        "elapsed_ns": 11895983
+      },
+      {
+        "method": "bm25",
+        "query_id": "q05",
+        "repetition": 4,
+        "execution_index": 168,
+        "position_in_pair": 2,
+        "elapsed_ns": 146385
+      },
+      {
+        "method": "bm25",
+        "query_id": "q05",
+        "repetition": 5,
+        "execution_index": 169,
+        "position_in_pair": 1,
+        "elapsed_ns": 103800
+      },
+      {
+        "method": "embedding",
+        "query_id": "q05",
+        "repetition": 5,
+        "execution_index": 170,
+        "position_in_pair": 2,
+        "elapsed_ns": 12028377
+      },
+      {
+        "method": "embedding",
+        "query_id": "q05",
+        "repetition": 6,
+        "execution_index": 171,
+        "position_in_pair": 1,
+        "elapsed_ns": 13296461
+      },
+      {
+        "method": "bm25",
+        "query_id": "q05",
+        "repetition": 6,
+        "execution_index": 172,
+        "position_in_pair": 2,
+        "elapsed_ns": 193488
+      },
+      {
+        "method": "bm25",
+        "query_id": "q05",
+        "repetition": 7,
+        "execution_index": 173,
+        "position_in_pair": 1,
+        "elapsed_ns": 116662
+      },
+      {
+        "method": "embedding",
+        "query_id": "q05",
+        "repetition": 7,
+        "execution_index": 174,
+        "position_in_pair": 2,
+        "elapsed_ns": 13272325
+      },
+      {
+        "method": "embedding",
+        "query_id": "q05",
+        "repetition": 8,
+        "execution_index": 175,
+        "position_in_pair": 1,
+        "elapsed_ns": 12878470
+      },
+      {
+        "method": "bm25",
+        "query_id": "q05",
+        "repetition": 8,
+        "execution_index": 176,
+        "position_in_pair": 2,
+        "elapsed_ns": 152962
+      },
+      {
+        "method": "bm25",
+        "query_id": "q05",
+        "repetition": 9,
+        "execution_index": 177,
+        "position_in_pair": 1,
+        "elapsed_ns": 99471
+      },
+      {
+        "method": "embedding",
+        "query_id": "q05",
+        "repetition": 9,
+        "execution_index": 178,
+        "position_in_pair": 2,
+        "elapsed_ns": 13083269
+      },
+      {
+        "method": "embedding",
+        "query_id": "q05",
+        "repetition": 10,
+        "execution_index": 179,
+        "position_in_pair": 1,
+        "elapsed_ns": 13101416
+      },
+      {
+        "method": "bm25",
+        "query_id": "q05",
+        "repetition": 10,
+        "execution_index": 180,
+        "position_in_pair": 2,
+        "elapsed_ns": 209631
+      },
+      {
+        "method": "bm25",
+        "query_id": "q05",
+        "repetition": 11,
+        "execution_index": 181,
+        "position_in_pair": 1,
+        "elapsed_ns": 133689
+      },
+      {
+        "method": "embedding",
+        "query_id": "q05",
+        "repetition": 11,
+        "execution_index": 182,
+        "position_in_pair": 2,
+        "elapsed_ns": 12577528
+      },
+      {
+        "method": "embedding",
+        "query_id": "q05",
+        "repetition": 12,
+        "execution_index": 183,
+        "position_in_pair": 1,
+        "elapsed_ns": 13358769
+      },
+      {
+        "method": "bm25",
+        "query_id": "q05",
+        "repetition": 12,
+        "execution_index": 184,
+        "position_in_pair": 2,
+        "elapsed_ns": 195519
+      },
+      {
+        "method": "bm25",
+        "query_id": "q05",
+        "repetition": 13,
+        "execution_index": 185,
+        "position_in_pair": 1,
+        "elapsed_ns": 116853
+      },
+      {
+        "method": "embedding",
+        "query_id": "q05",
+        "repetition": 13,
+        "execution_index": 186,
+        "position_in_pair": 2,
+        "elapsed_ns": 13124513
+      },
+      {
+        "method": "embedding",
+        "query_id": "q05",
+        "repetition": 14,
+        "execution_index": 187,
+        "position_in_pair": 1,
+        "elapsed_ns": 13512481
+      },
+      {
+        "method": "bm25",
+        "query_id": "q05",
+        "repetition": 14,
+        "execution_index": 188,
+        "position_in_pair": 2,
+        "elapsed_ns": 156375
+      },
+      {
+        "method": "bm25",
+        "query_id": "q05",
+        "repetition": 15,
+        "execution_index": 189,
+        "position_in_pair": 1,
+        "elapsed_ns": 105970
+      },
+      {
+        "method": "embedding",
+        "query_id": "q05",
+        "repetition": 15,
+        "execution_index": 190,
+        "position_in_pair": 2,
+        "elapsed_ns": 13456717
+      },
+      {
+        "method": "embedding",
+        "query_id": "q05",
+        "repetition": 16,
+        "execution_index": 191,
+        "position_in_pair": 1,
+        "elapsed_ns": 12075822
+      },
+      {
+        "method": "bm25",
+        "query_id": "q05",
+        "repetition": 16,
+        "execution_index": 192,
+        "position_in_pair": 2,
+        "elapsed_ns": 146716
+      },
+      {
+        "method": "bm25",
+        "query_id": "q05",
+        "repetition": 17,
+        "execution_index": 193,
+        "position_in_pair": 1,
+        "elapsed_ns": 98749
+      },
+      {
+        "method": "embedding",
+        "query_id": "q05",
+        "repetition": 17,
+        "execution_index": 194,
+        "position_in_pair": 2,
+        "elapsed_ns": 12333000
+      },
+      {
+        "method": "embedding",
+        "query_id": "q05",
+        "repetition": 18,
+        "execution_index": 195,
+        "position_in_pair": 1,
+        "elapsed_ns": 13528264
+      },
+      {
+        "method": "bm25",
+        "query_id": "q05",
+        "repetition": 18,
+        "execution_index": 196,
+        "position_in_pair": 2,
+        "elapsed_ns": 148417
+      },
+      {
+        "method": "bm25",
+        "query_id": "q05",
+        "repetition": 19,
+        "execution_index": 197,
+        "position_in_pair": 1,
+        "elapsed_ns": 99160
+      },
+      {
+        "method": "embedding",
+        "query_id": "q05",
+        "repetition": 19,
+        "execution_index": 198,
+        "position_in_pair": 2,
+        "elapsed_ns": 13467514
+      },
+      {
+        "method": "embedding",
+        "query_id": "q05",
+        "repetition": 20,
+        "execution_index": 199,
+        "position_in_pair": 1,
+        "elapsed_ns": 13346344
+      },
+      {
+        "method": "bm25",
+        "query_id": "q05",
+        "repetition": 20,
+        "execution_index": 200,
+        "position_in_pair": 2,
+        "elapsed_ns": 147514
+      },
+      {
+        "method": "bm25",
+        "query_id": "q06",
+        "repetition": 1,
+        "execution_index": 201,
+        "position_in_pair": 1,
+        "elapsed_ns": 263406
+      },
+      {
+        "method": "embedding",
+        "query_id": "q06",
+        "repetition": 1,
+        "execution_index": 202,
+        "position_in_pair": 2,
+        "elapsed_ns": 15650090
+      },
+      {
+        "method": "embedding",
+        "query_id": "q06",
+        "repetition": 2,
+        "execution_index": 203,
+        "position_in_pair": 1,
+        "elapsed_ns": 15915993
+      },
+      {
+        "method": "bm25",
+        "query_id": "q06",
+        "repetition": 2,
+        "execution_index": 204,
+        "position_in_pair": 2,
+        "elapsed_ns": 260307
+      },
+      {
+        "method": "bm25",
+        "query_id": "q06",
+        "repetition": 3,
+        "execution_index": 205,
+        "position_in_pair": 1,
+        "elapsed_ns": 153516
+      },
+      {
+        "method": "embedding",
+        "query_id": "q06",
+        "repetition": 3,
+        "execution_index": 206,
+        "position_in_pair": 2,
+        "elapsed_ns": 15309492
+      },
+      {
+        "method": "embedding",
+        "query_id": "q06",
+        "repetition": 4,
+        "execution_index": 207,
+        "position_in_pair": 1,
+        "elapsed_ns": 16604222
+      },
+      {
+        "method": "bm25",
+        "query_id": "q06",
+        "repetition": 4,
+        "execution_index": 208,
+        "position_in_pair": 2,
+        "elapsed_ns": 199739
+      },
+      {
+        "method": "bm25",
+        "query_id": "q06",
+        "repetition": 5,
+        "execution_index": 209,
+        "position_in_pair": 1,
+        "elapsed_ns": 152241
+      },
+      {
+        "method": "embedding",
+        "query_id": "q06",
+        "repetition": 5,
+        "execution_index": 210,
+        "position_in_pair": 2,
+        "elapsed_ns": 15765412
+      },
+      {
+        "method": "embedding",
+        "query_id": "q06",
+        "repetition": 6,
+        "execution_index": 211,
+        "position_in_pair": 1,
+        "elapsed_ns": 18869032
+      },
+      {
+        "method": "bm25",
+        "query_id": "q06",
+        "repetition": 6,
+        "execution_index": 212,
+        "position_in_pair": 2,
+        "elapsed_ns": 277355
+      },
+      {
+        "method": "bm25",
+        "query_id": "q06",
+        "repetition": 7,
+        "execution_index": 213,
+        "position_in_pair": 1,
+        "elapsed_ns": 160299
+      },
+      {
+        "method": "embedding",
+        "query_id": "q06",
+        "repetition": 7,
+        "execution_index": 214,
+        "position_in_pair": 2,
+        "elapsed_ns": 17292315
+      },
+      {
+        "method": "embedding",
+        "query_id": "q06",
+        "repetition": 8,
+        "execution_index": 215,
+        "position_in_pair": 1,
+        "elapsed_ns": 17940064
+      },
+      {
+        "method": "bm25",
+        "query_id": "q06",
+        "repetition": 8,
+        "execution_index": 216,
+        "position_in_pair": 2,
+        "elapsed_ns": 209162
+      },
+      {
+        "method": "bm25",
+        "query_id": "q06",
+        "repetition": 9,
+        "execution_index": 217,
+        "position_in_pair": 1,
+        "elapsed_ns": 194008
+      },
+      {
+        "method": "embedding",
+        "query_id": "q06",
+        "repetition": 9,
+        "execution_index": 218,
+        "position_in_pair": 2,
+        "elapsed_ns": 16391970
+      },
+      {
+        "method": "embedding",
+        "query_id": "q06",
+        "repetition": 10,
+        "execution_index": 219,
+        "position_in_pair": 1,
+        "elapsed_ns": 15418681
+      },
+      {
+        "method": "bm25",
+        "query_id": "q06",
+        "repetition": 10,
+        "execution_index": 220,
+        "position_in_pair": 2,
+        "elapsed_ns": 206566
+      },
+      {
+        "method": "bm25",
+        "query_id": "q06",
+        "repetition": 11,
+        "execution_index": 221,
+        "position_in_pair": 1,
+        "elapsed_ns": 147516
+      },
+      {
+        "method": "embedding",
+        "query_id": "q06",
+        "repetition": 11,
+        "execution_index": 222,
+        "position_in_pair": 2,
+        "elapsed_ns": 15394217
+      },
+      {
+        "method": "embedding",
+        "query_id": "q06",
+        "repetition": 12,
+        "execution_index": 223,
+        "position_in_pair": 1,
+        "elapsed_ns": 15457013
+      },
+      {
+        "method": "bm25",
+        "query_id": "q06",
+        "repetition": 12,
+        "execution_index": 224,
+        "position_in_pair": 2,
+        "elapsed_ns": 280452
+      },
+      {
+        "method": "bm25",
+        "query_id": "q06",
+        "repetition": 13,
+        "execution_index": 225,
+        "position_in_pair": 1,
+        "elapsed_ns": 160432
+      },
+      {
+        "method": "embedding",
+        "query_id": "q06",
+        "repetition": 13,
+        "execution_index": 226,
+        "position_in_pair": 2,
+        "elapsed_ns": 17069093
+      },
+      {
+        "method": "embedding",
+        "query_id": "q06",
+        "repetition": 14,
+        "execution_index": 227,
+        "position_in_pair": 1,
+        "elapsed_ns": 16708190
+      },
+      {
+        "method": "bm25",
+        "query_id": "q06",
+        "repetition": 14,
+        "execution_index": 228,
+        "position_in_pair": 2,
+        "elapsed_ns": 201754
+      },
+      {
+        "method": "bm25",
+        "query_id": "q06",
+        "repetition": 15,
+        "execution_index": 229,
+        "position_in_pair": 1,
+        "elapsed_ns": 137328
+      },
+      {
+        "method": "embedding",
+        "query_id": "q06",
+        "repetition": 15,
+        "execution_index": 230,
+        "position_in_pair": 2,
+        "elapsed_ns": 16325190
+      },
+      {
+        "method": "embedding",
+        "query_id": "q06",
+        "repetition": 16,
+        "execution_index": 231,
+        "position_in_pair": 1,
+        "elapsed_ns": 15166609
+      },
+      {
+        "method": "bm25",
+        "query_id": "q06",
+        "repetition": 16,
+        "execution_index": 232,
+        "position_in_pair": 2,
+        "elapsed_ns": 234077
+      },
+      {
+        "method": "bm25",
+        "query_id": "q06",
+        "repetition": 17,
+        "execution_index": 233,
+        "position_in_pair": 1,
+        "elapsed_ns": 161608
+      },
+      {
+        "method": "embedding",
+        "query_id": "q06",
+        "repetition": 17,
+        "execution_index": 234,
+        "position_in_pair": 2,
+        "elapsed_ns": 15840936
+      },
+      {
+        "method": "embedding",
+        "query_id": "q06",
+        "repetition": 18,
+        "execution_index": 235,
+        "position_in_pair": 1,
+        "elapsed_ns": 15769196
+      },
+      {
+        "method": "bm25",
+        "query_id": "q06",
+        "repetition": 18,
+        "execution_index": 236,
+        "position_in_pair": 2,
+        "elapsed_ns": 209979
+      },
+      {
+        "method": "bm25",
+        "query_id": "q06",
+        "repetition": 19,
+        "execution_index": 237,
+        "position_in_pair": 1,
+        "elapsed_ns": 142858
+      },
+      {
+        "method": "embedding",
+        "query_id": "q06",
+        "repetition": 19,
+        "execution_index": 238,
+        "position_in_pair": 2,
+        "elapsed_ns": 17089517
+      },
+      {
+        "method": "embedding",
+        "query_id": "q06",
+        "repetition": 20,
+        "execution_index": 239,
+        "position_in_pair": 1,
+        "elapsed_ns": 12995412
+      },
+      {
+        "method": "bm25",
+        "query_id": "q06",
+        "repetition": 20,
+        "execution_index": 240,
+        "position_in_pair": 2,
+        "elapsed_ns": 136064
+      },
+      {
+        "method": "bm25",
+        "query_id": "q07",
+        "repetition": 1,
+        "execution_index": 241,
+        "position_in_pair": 1,
+        "elapsed_ns": 107622
+      },
+      {
+        "method": "embedding",
+        "query_id": "q07",
+        "repetition": 1,
+        "execution_index": 242,
+        "position_in_pair": 2,
+        "elapsed_ns": 11327179
+      },
+      {
+        "method": "embedding",
+        "query_id": "q07",
+        "repetition": 2,
+        "execution_index": 243,
+        "position_in_pair": 1,
+        "elapsed_ns": 11050139
+      },
+      {
+        "method": "bm25",
+        "query_id": "q07",
+        "repetition": 2,
+        "execution_index": 244,
+        "position_in_pair": 2,
+        "elapsed_ns": 173530
+      },
+      {
+        "method": "bm25",
+        "query_id": "q07",
+        "repetition": 3,
+        "execution_index": 245,
+        "position_in_pair": 1,
+        "elapsed_ns": 75619
+      },
+      {
+        "method": "embedding",
+        "query_id": "q07",
+        "repetition": 3,
+        "execution_index": 246,
+        "position_in_pair": 2,
+        "elapsed_ns": 12595603
+      },
+      {
+        "method": "embedding",
+        "query_id": "q07",
+        "repetition": 4,
+        "execution_index": 247,
+        "position_in_pair": 1,
+        "elapsed_ns": 11746856
+      },
+      {
+        "method": "bm25",
+        "query_id": "q07",
+        "repetition": 4,
+        "execution_index": 248,
+        "position_in_pair": 2,
+        "elapsed_ns": 106489
+      },
+      {
+        "method": "bm25",
+        "query_id": "q07",
+        "repetition": 5,
+        "execution_index": 249,
+        "position_in_pair": 1,
+        "elapsed_ns": 72593
+      },
+      {
+        "method": "embedding",
+        "query_id": "q07",
+        "repetition": 5,
+        "execution_index": 250,
+        "position_in_pair": 2,
+        "elapsed_ns": 11617285
+      },
+      {
+        "method": "embedding",
+        "query_id": "q07",
+        "repetition": 6,
+        "execution_index": 251,
+        "position_in_pair": 1,
+        "elapsed_ns": 12348991
+      },
+      {
+        "method": "bm25",
+        "query_id": "q07",
+        "repetition": 6,
+        "execution_index": 252,
+        "position_in_pair": 2,
+        "elapsed_ns": 108646
+      },
+      {
+        "method": "bm25",
+        "query_id": "q07",
+        "repetition": 7,
+        "execution_index": 253,
+        "position_in_pair": 1,
+        "elapsed_ns": 138340
+      },
+      {
+        "method": "embedding",
+        "query_id": "q07",
+        "repetition": 7,
+        "execution_index": 254,
+        "position_in_pair": 2,
+        "elapsed_ns": 12014635
+      },
+      {
+        "method": "embedding",
+        "query_id": "q07",
+        "repetition": 8,
+        "execution_index": 255,
+        "position_in_pair": 1,
+        "elapsed_ns": 11728742
+      },
+      {
+        "method": "bm25",
+        "query_id": "q07",
+        "repetition": 8,
+        "execution_index": 256,
+        "position_in_pair": 2,
+        "elapsed_ns": 192044
+      },
+      {
+        "method": "bm25",
+        "query_id": "q07",
+        "repetition": 9,
+        "execution_index": 257,
+        "position_in_pair": 1,
+        "elapsed_ns": 82103
+      },
+      {
+        "method": "embedding",
+        "query_id": "q07",
+        "repetition": 9,
+        "execution_index": 258,
+        "position_in_pair": 2,
+        "elapsed_ns": 11319645
+      },
+      {
+        "method": "embedding",
+        "query_id": "q07",
+        "repetition": 10,
+        "execution_index": 259,
+        "position_in_pair": 1,
+        "elapsed_ns": 11528214
+      },
+      {
+        "method": "bm25",
+        "query_id": "q07",
+        "repetition": 10,
+        "execution_index": 260,
+        "position_in_pair": 2,
+        "elapsed_ns": 109164
+      },
+      {
+        "method": "bm25",
+        "query_id": "q07",
+        "repetition": 11,
+        "execution_index": 261,
+        "position_in_pair": 1,
+        "elapsed_ns": 72589
+      },
+      {
+        "method": "embedding",
+        "query_id": "q07",
+        "repetition": 11,
+        "execution_index": 262,
+        "position_in_pair": 2,
+        "elapsed_ns": 11822255
+      },
+      {
+        "method": "embedding",
+        "query_id": "q07",
+        "repetition": 12,
+        "execution_index": 263,
+        "position_in_pair": 1,
+        "elapsed_ns": 12078048
+      },
+      {
+        "method": "bm25",
+        "query_id": "q07",
+        "repetition": 12,
+        "execution_index": 264,
+        "position_in_pair": 2,
+        "elapsed_ns": 106476
+      },
+      {
+        "method": "bm25",
+        "query_id": "q07",
+        "repetition": 13,
+        "execution_index": 265,
+        "position_in_pair": 1,
+        "elapsed_ns": 73057
+      },
+      {
+        "method": "embedding",
+        "query_id": "q07",
+        "repetition": 13,
+        "execution_index": 266,
+        "position_in_pair": 2,
+        "elapsed_ns": 11479902
+      },
+      {
+        "method": "embedding",
+        "query_id": "q07",
+        "repetition": 14,
+        "execution_index": 267,
+        "position_in_pair": 1,
+        "elapsed_ns": 12886564
+      },
+      {
+        "method": "bm25",
+        "query_id": "q07",
+        "repetition": 14,
+        "execution_index": 268,
+        "position_in_pair": 2,
+        "elapsed_ns": 113549
+      },
+      {
+        "method": "bm25",
+        "query_id": "q07",
+        "repetition": 15,
+        "execution_index": 269,
+        "position_in_pair": 1,
+        "elapsed_ns": 171619
+      },
+      {
+        "method": "embedding",
+        "query_id": "q07",
+        "repetition": 15,
+        "execution_index": 270,
+        "position_in_pair": 2,
+        "elapsed_ns": 11393275
+      },
+      {
+        "method": "embedding",
+        "query_id": "q07",
+        "repetition": 16,
+        "execution_index": 271,
+        "position_in_pair": 1,
+        "elapsed_ns": 11177934
+      },
+      {
+        "method": "bm25",
+        "query_id": "q07",
+        "repetition": 16,
+        "execution_index": 272,
+        "position_in_pair": 2,
+        "elapsed_ns": 107132
+      },
+      {
+        "method": "bm25",
+        "query_id": "q07",
+        "repetition": 17,
+        "execution_index": 273,
+        "position_in_pair": 1,
+        "elapsed_ns": 71654
+      },
+      {
+        "method": "embedding",
+        "query_id": "q07",
+        "repetition": 17,
+        "execution_index": 274,
+        "position_in_pair": 2,
+        "elapsed_ns": 10831326
+      },
+      {
+        "method": "embedding",
+        "query_id": "q07",
+        "repetition": 18,
+        "execution_index": 275,
+        "position_in_pair": 1,
+        "elapsed_ns": 11862359
+      },
+      {
+        "method": "bm25",
+        "query_id": "q07",
+        "repetition": 18,
+        "execution_index": 276,
+        "position_in_pair": 2,
+        "elapsed_ns": 106184
+      },
+      {
+        "method": "bm25",
+        "query_id": "q07",
+        "repetition": 19,
+        "execution_index": 277,
+        "position_in_pair": 1,
+        "elapsed_ns": 72718
+      },
+      {
+        "method": "embedding",
+        "query_id": "q07",
+        "repetition": 19,
+        "execution_index": 278,
+        "position_in_pair": 2,
+        "elapsed_ns": 10794356
+      },
+      {
+        "method": "embedding",
+        "query_id": "q07",
+        "repetition": 20,
+        "execution_index": 279,
+        "position_in_pair": 1,
+        "elapsed_ns": 11056515
+      },
+      {
+        "method": "bm25",
+        "query_id": "q07",
+        "repetition": 20,
+        "execution_index": 280,
+        "position_in_pair": 2,
+        "elapsed_ns": 179738
+      },
+      {
+        "method": "bm25",
+        "query_id": "q08",
+        "repetition": 1,
+        "execution_index": 281,
+        "position_in_pair": 1,
+        "elapsed_ns": 185145
+      },
+      {
+        "method": "embedding",
+        "query_id": "q08",
+        "repetition": 1,
+        "execution_index": 282,
+        "position_in_pair": 2,
+        "elapsed_ns": 10707188
+      },
+      {
+        "method": "embedding",
+        "query_id": "q08",
+        "repetition": 2,
+        "execution_index": 283,
+        "position_in_pair": 1,
+        "elapsed_ns": 10911168
+      },
+      {
+        "method": "bm25",
+        "query_id": "q08",
+        "repetition": 2,
+        "execution_index": 284,
+        "position_in_pair": 2,
+        "elapsed_ns": 127284
+      },
+      {
+        "method": "bm25",
+        "query_id": "q08",
+        "repetition": 3,
+        "execution_index": 285,
+        "position_in_pair": 1,
+        "elapsed_ns": 159222
+      },
+      {
+        "method": "embedding",
+        "query_id": "q08",
+        "repetition": 3,
+        "execution_index": 286,
+        "position_in_pair": 2,
+        "elapsed_ns": 10738253
+      },
+      {
+        "method": "embedding",
+        "query_id": "q08",
+        "repetition": 4,
+        "execution_index": 287,
+        "position_in_pair": 1,
+        "elapsed_ns": 10705733
+      },
+      {
+        "method": "bm25",
+        "query_id": "q08",
+        "repetition": 4,
+        "execution_index": 288,
+        "position_in_pair": 2,
+        "elapsed_ns": 128833
+      },
+      {
+        "method": "bm25",
+        "query_id": "q08",
+        "repetition": 5,
+        "execution_index": 289,
+        "position_in_pair": 1,
+        "elapsed_ns": 91374
+      },
+      {
+        "method": "embedding",
+        "query_id": "q08",
+        "repetition": 5,
+        "execution_index": 290,
+        "position_in_pair": 2,
+        "elapsed_ns": 12354762
+      },
+      {
+        "method": "embedding",
+        "query_id": "q08",
+        "repetition": 6,
+        "execution_index": 291,
+        "position_in_pair": 1,
+        "elapsed_ns": 11313103
+      },
+      {
+        "method": "bm25",
+        "query_id": "q08",
+        "repetition": 6,
+        "execution_index": 292,
+        "position_in_pair": 2,
+        "elapsed_ns": 133439
+      },
+      {
+        "method": "bm25",
+        "query_id": "q08",
+        "repetition": 7,
+        "execution_index": 293,
+        "position_in_pair": 1,
+        "elapsed_ns": 91159
+      },
+      {
+        "method": "embedding",
+        "query_id": "q08",
+        "repetition": 7,
+        "execution_index": 294,
+        "position_in_pair": 2,
+        "elapsed_ns": 12042175
+      },
+      {
+        "method": "embedding",
+        "query_id": "q08",
+        "repetition": 8,
+        "execution_index": 295,
+        "position_in_pair": 1,
+        "elapsed_ns": 11474487
+      },
+      {
+        "method": "bm25",
+        "query_id": "q08",
+        "repetition": 8,
+        "execution_index": 296,
+        "position_in_pair": 2,
+        "elapsed_ns": 179985
+      },
+      {
+        "method": "bm25",
+        "query_id": "q08",
+        "repetition": 9,
+        "execution_index": 297,
+        "position_in_pair": 1,
+        "elapsed_ns": 95193
+      },
+      {
+        "method": "embedding",
+        "query_id": "q08",
+        "repetition": 9,
+        "execution_index": 298,
+        "position_in_pair": 2,
+        "elapsed_ns": 12072706
+      },
+      {
+        "method": "embedding",
+        "query_id": "q08",
+        "repetition": 10,
+        "execution_index": 299,
+        "position_in_pair": 1,
+        "elapsed_ns": 11431343
+      },
+      {
+        "method": "bm25",
+        "query_id": "q08",
+        "repetition": 10,
+        "execution_index": 300,
+        "position_in_pair": 2,
+        "elapsed_ns": 130893
+      },
+      {
+        "method": "bm25",
+        "query_id": "q08",
+        "repetition": 11,
+        "execution_index": 301,
+        "position_in_pair": 1,
+        "elapsed_ns": 92093
+      },
+      {
+        "method": "embedding",
+        "query_id": "q08",
+        "repetition": 11,
+        "execution_index": 302,
+        "position_in_pair": 2,
+        "elapsed_ns": 20061244
+      },
+      {
+        "method": "embedding",
+        "query_id": "q08",
+        "repetition": 12,
+        "execution_index": 303,
+        "position_in_pair": 1,
+        "elapsed_ns": 13138302
+      },
+      {
+        "method": "bm25",
+        "query_id": "q08",
+        "repetition": 12,
+        "execution_index": 304,
+        "position_in_pair": 2,
+        "elapsed_ns": 130821
+      },
+      {
+        "method": "bm25",
+        "query_id": "q08",
+        "repetition": 13,
+        "execution_index": 305,
+        "position_in_pair": 1,
+        "elapsed_ns": 92368
+      },
+      {
+        "method": "embedding",
+        "query_id": "q08",
+        "repetition": 13,
+        "execution_index": 306,
+        "position_in_pair": 2,
+        "elapsed_ns": 11652020
+      },
+      {
+        "method": "embedding",
+        "query_id": "q08",
+        "repetition": 14,
+        "execution_index": 307,
+        "position_in_pair": 1,
+        "elapsed_ns": 11559618
+      },
+      {
+        "method": "bm25",
+        "query_id": "q08",
+        "repetition": 14,
+        "execution_index": 308,
+        "position_in_pair": 2,
+        "elapsed_ns": 129615
+      },
+      {
+        "method": "bm25",
+        "query_id": "q08",
+        "repetition": 15,
+        "execution_index": 309,
+        "position_in_pair": 1,
+        "elapsed_ns": 91646
+      },
+      {
+        "method": "embedding",
+        "query_id": "q08",
+        "repetition": 15,
+        "execution_index": 310,
+        "position_in_pair": 2,
+        "elapsed_ns": 11198158
+      },
+      {
+        "method": "embedding",
+        "query_id": "q08",
+        "repetition": 16,
+        "execution_index": 311,
+        "position_in_pair": 1,
+        "elapsed_ns": 11714079
+      },
+      {
+        "method": "bm25",
+        "query_id": "q08",
+        "repetition": 16,
+        "execution_index": 312,
+        "position_in_pair": 2,
+        "elapsed_ns": 190741
+      },
+      {
+        "method": "bm25",
+        "query_id": "q08",
+        "repetition": 17,
+        "execution_index": 313,
+        "position_in_pair": 1,
+        "elapsed_ns": 91504
+      },
+      {
+        "method": "embedding",
+        "query_id": "q08",
+        "repetition": 17,
+        "execution_index": 314,
+        "position_in_pair": 2,
+        "elapsed_ns": 11843983
+      },
+      {
+        "method": "embedding",
+        "query_id": "q08",
+        "repetition": 18,
+        "execution_index": 315,
+        "position_in_pair": 1,
+        "elapsed_ns": 11345706
+      },
+      {
+        "method": "bm25",
+        "query_id": "q08",
+        "repetition": 18,
+        "execution_index": 316,
+        "position_in_pair": 2,
+        "elapsed_ns": 177638
+      },
+      {
+        "method": "bm25",
+        "query_id": "q08",
+        "repetition": 19,
+        "execution_index": 317,
+        "position_in_pair": 1,
+        "elapsed_ns": 92069
+      },
+      {
+        "method": "embedding",
+        "query_id": "q08",
+        "repetition": 19,
+        "execution_index": 318,
+        "position_in_pair": 2,
+        "elapsed_ns": 11160571
+      },
+      {
+        "method": "embedding",
+        "query_id": "q08",
+        "repetition": 20,
+        "execution_index": 319,
+        "position_in_pair": 1,
+        "elapsed_ns": 12887226
+      },
+      {
+        "method": "bm25",
+        "query_id": "q08",
+        "repetition": 20,
+        "execution_index": 320,
+        "position_in_pair": 2,
+        "elapsed_ns": 194865
+      }
+    ],
+    "warmup_samples": [
+      {
+        "method": "bm25",
+        "query_id": "q01",
+        "warmup_index": 1,
+        "elapsed_ns": 74273
+      },
+      {
+        "method": "embedding",
+        "query_id": "q01",
+        "warmup_index": 1,
+        "elapsed_ns": 11515029
+      },
+      {
+        "method": "bm25",
+        "query_id": "q01",
+        "warmup_index": 2,
+        "elapsed_ns": 68445
+      },
+      {
+        "method": "embedding",
+        "query_id": "q01",
+        "warmup_index": 2,
+        "elapsed_ns": 11886154
+      },
+      {
+        "method": "bm25",
+        "query_id": "q01",
+        "warmup_index": 3,
+        "elapsed_ns": 72712
+      },
+      {
+        "method": "embedding",
+        "query_id": "q01",
+        "warmup_index": 3,
+        "elapsed_ns": 11927321
+      },
+      {
+        "method": "bm25",
+        "query_id": "q02",
+        "warmup_index": 1,
+        "elapsed_ns": 176047
+      },
+      {
+        "method": "embedding",
+        "query_id": "q02",
+        "warmup_index": 1,
+        "elapsed_ns": 18387268
+      },
+      {
+        "method": "bm25",
+        "query_id": "q02",
+        "warmup_index": 2,
+        "elapsed_ns": 151535
+      },
+      {
+        "method": "embedding",
+        "query_id": "q02",
+        "warmup_index": 2,
+        "elapsed_ns": 13755614
+      },
+      {
+        "method": "bm25",
+        "query_id": "q02",
+        "warmup_index": 3,
+        "elapsed_ns": 168924
+      },
+      {
+        "method": "embedding",
+        "query_id": "q02",
+        "warmup_index": 3,
+        "elapsed_ns": 13893474
+      },
+      {
+        "method": "bm25",
+        "query_id": "q03",
+        "warmup_index": 1,
+        "elapsed_ns": 75373
+      },
+      {
+        "method": "embedding",
+        "query_id": "q03",
+        "warmup_index": 1,
+        "elapsed_ns": 10840252
+      },
+      {
+        "method": "bm25",
+        "query_id": "q03",
+        "warmup_index": 2,
+        "elapsed_ns": 106817
+      },
+      {
+        "method": "embedding",
+        "query_id": "q03",
+        "warmup_index": 2,
+        "elapsed_ns": 10606803
+      },
+      {
+        "method": "bm25",
+        "query_id": "q03",
+        "warmup_index": 3,
+        "elapsed_ns": 157208
+      },
+      {
+        "method": "embedding",
+        "query_id": "q03",
+        "warmup_index": 3,
+        "elapsed_ns": 10301338
+      },
+      {
+        "method": "bm25",
+        "query_id": "q04",
+        "warmup_index": 1,
+        "elapsed_ns": 121140
+      },
+      {
+        "method": "embedding",
+        "query_id": "q04",
+        "warmup_index": 1,
+        "elapsed_ns": 11432843
+      },
+      {
+        "method": "bm25",
+        "query_id": "q04",
+        "warmup_index": 2,
+        "elapsed_ns": 99463
+      },
+      {
+        "method": "embedding",
+        "query_id": "q04",
+        "warmup_index": 2,
+        "elapsed_ns": 10985530
+      },
+      {
+        "method": "bm25",
+        "query_id": "q04",
+        "warmup_index": 3,
+        "elapsed_ns": 95637
+      },
+      {
+        "method": "embedding",
+        "query_id": "q04",
+        "warmup_index": 3,
+        "elapsed_ns": 11628155
+      },
+      {
+        "method": "bm25",
+        "query_id": "q05",
+        "warmup_index": 1,
+        "elapsed_ns": 101377
+      },
+      {
+        "method": "embedding",
+        "query_id": "q05",
+        "warmup_index": 1,
+        "elapsed_ns": 12316530
+      },
+      {
+        "method": "bm25",
+        "query_id": "q05",
+        "warmup_index": 2,
+        "elapsed_ns": 156578
+      },
+      {
+        "method": "embedding",
+        "query_id": "q05",
+        "warmup_index": 2,
+        "elapsed_ns": 13932872
+      },
+      {
+        "method": "bm25",
+        "query_id": "q05",
+        "warmup_index": 3,
+        "elapsed_ns": 152305
+      },
+      {
+        "method": "embedding",
+        "query_id": "q05",
+        "warmup_index": 3,
+        "elapsed_ns": 13979295
+      },
+      {
+        "method": "bm25",
+        "query_id": "q06",
+        "warmup_index": 1,
+        "elapsed_ns": 146042
+      },
+      {
+        "method": "embedding",
+        "query_id": "q06",
+        "warmup_index": 1,
+        "elapsed_ns": 15809204
+      },
+      {
+        "method": "bm25",
+        "query_id": "q06",
+        "warmup_index": 2,
+        "elapsed_ns": 260165
+      },
+      {
+        "method": "embedding",
+        "query_id": "q06",
+        "warmup_index": 2,
+        "elapsed_ns": 16879561
+      },
+      {
+        "method": "bm25",
+        "query_id": "q06",
+        "warmup_index": 3,
+        "elapsed_ns": 253905
+      },
+      {
+        "method": "embedding",
+        "query_id": "q06",
+        "warmup_index": 3,
+        "elapsed_ns": 16607772
+      },
+      {
+        "method": "bm25",
+        "query_id": "q07",
+        "warmup_index": 1,
+        "elapsed_ns": 76329
+      },
+      {
+        "method": "embedding",
+        "query_id": "q07",
+        "warmup_index": 1,
+        "elapsed_ns": 13432443
+      },
+      {
+        "method": "bm25",
+        "query_id": "q07",
+        "warmup_index": 2,
+        "elapsed_ns": 116157
+      },
+      {
+        "method": "embedding",
+        "query_id": "q07",
+        "warmup_index": 2,
+        "elapsed_ns": 12881570
+      },
+      {
+        "method": "bm25",
+        "query_id": "q07",
+        "warmup_index": 3,
+        "elapsed_ns": 152346
+      },
+      {
+        "method": "embedding",
+        "query_id": "q07",
+        "warmup_index": 3,
+        "elapsed_ns": 11727962
+      },
+      {
+        "method": "bm25",
+        "query_id": "q08",
+        "warmup_index": 1,
+        "elapsed_ns": 101661
+      },
+      {
+        "method": "embedding",
+        "query_id": "q08",
+        "warmup_index": 1,
+        "elapsed_ns": 11401713
+      },
+      {
+        "method": "bm25",
+        "query_id": "q08",
+        "warmup_index": 2,
+        "elapsed_ns": 127069
+      },
+      {
+        "method": "embedding",
+        "query_id": "q08",
+        "warmup_index": 2,
+        "elapsed_ns": 11102765
+      },
+      {
+        "method": "bm25",
+        "query_id": "q08",
+        "warmup_index": 3,
+        "elapsed_ns": 193127
+      },
+      {
+        "method": "embedding",
+        "query_id": "q08",
+        "warmup_index": 3,
+        "elapsed_ns": 10780389
+      }
+    ],
+    "summary": {
+      "bm25": {
+        "overall": {
+          "n": 160,
+          "median_ns": 109426.5,
+          "min_ns": 39759,
+          "max_ns": 280452,
+          "p95_ns": 206566.0
+        },
+        "per_query": {
+          "q01": {
+            "n": 20,
+            "median_ns": 68341.0,
+            "min_ns": 39759,
+            "max_ns": 135393
+          },
+          "q02": {
+            "n": 20,
+            "median_ns": 139345.0,
+            "min_ns": 97035,
+            "max_ns": 201776
+          },
+          "q03": {
+            "n": 20,
+            "median_ns": 98751.0,
+            "min_ns": 55864,
+            "max_ns": 176643
+          },
+          "q04": {
+            "n": 20,
+            "median_ns": 99167.0,
+            "min_ns": 64030,
+            "max_ns": 160195
+          },
+          "q05": {
+            "n": 20,
+            "median_ns": 145403.5,
+            "min_ns": 98749,
+            "max_ns": 209631
+          },
+          "q06": {
+            "n": 20,
+            "median_ns": 196873.5,
+            "min_ns": 136064,
+            "max_ns": 280452
+          },
+          "q07": {
+            "n": 20,
+            "median_ns": 106810.5,
+            "min_ns": 71654,
+            "max_ns": 192044
+          },
+          "q08": {
+            "n": 20,
+            "median_ns": 129224.0,
+            "min_ns": 91159,
+            "max_ns": 194865
+          }
+        }
+      },
+      "embedding": {
+        "overall": {
+          "n": 160,
+          "median_ns": 11833119.0,
+          "min_ns": 10120710,
+          "max_ns": 20061244,
+          "p95_ns": 16604222.0
+        },
+        "per_query": {
+          "q01": {
+            "n": 20,
+            "median_ns": 11491537.5,
+            "min_ns": 11327631,
+            "max_ns": 12003725
+          },
+          "q02": {
+            "n": 20,
+            "median_ns": 13748826.5,
+            "min_ns": 12932560,
+            "max_ns": 14586319
+          },
+          "q03": {
+            "n": 20,
+            "median_ns": 10401078.0,
+            "min_ns": 10120710,
+            "max_ns": 11376143
+          },
+          "q04": {
+            "n": 20,
+            "median_ns": 11066813.0,
+            "min_ns": 10639377,
+            "max_ns": 16938333
+          },
+          "q05": {
+            "n": 20,
+            "median_ns": 13112964.5,
+            "min_ns": 11895983,
+            "max_ns": 14167124
+          },
+          "q06": {
+            "n": 20,
+            "median_ns": 15878464.5,
+            "min_ns": 12995412,
+            "max_ns": 18869032
+          },
+          "q07": {
+            "n": 20,
+            "median_ns": 11572749.5,
+            "min_ns": 10794356,
+            "max_ns": 12886564
+          },
+          "q08": {
+            "n": 20,
+            "median_ns": 11517052.5,
+            "min_ns": 10705733,
+            "max_ns": 20061244
+          }
+        }
+      }
+    }
+  },
+  "results": {
+    "bm25": {
+      "counts": {
+        "total": 8,
+        "scored": 7,
+        "no_judged_relevant": 1
+      },
+      "aggregate": {
+        "1": {
+          "macro_recall": 0.7142857142857143,
+          "mrr": 0.8571428571428571
+        },
+        "3": {
+          "macro_recall": 0.7142857142857143,
+          "mrr": 0.8571428571428571
+        },
+        "5": {
+          "macro_recall": 0.7142857142857143,
+          "mrr": 0.8571428571428571
+        }
+      },
+      "queries": [
+        {
+          "query_id": "q01",
+          "status": "scored",
+          "n_relevant": 1,
+          "n_returned": 5,
+          "metrics": {
+            "1": {
+              "recall": 1.0,
+              "rr": 1.0
+            },
+            "3": {
+              "recall": 1.0,
+              "rr": 1.0
+            },
+            "5": {
+              "recall": 1.0,
+              "rr": 1.0
+            }
+          },
+          "ranking": [
+            {
+              "rank": 1,
+              "doc_id": "d01",
+              "score": 2.292250581398599,
+              "label": "relevant"
+            },
+            {
+              "rank": 2,
+              "doc_id": "d02",
+              "score": 0.0,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 3,
+              "doc_id": "d03",
+              "score": 0.0,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 4,
+              "doc_id": "d04",
+              "score": 0.0,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 5,
+              "doc_id": "d05",
+              "score": 0.0,
+              "label": "nonrelevant"
+            }
+          ],
+          "measured_search_consistency": {
+            "n_measured": 20,
+            "n_identical_to_quality_pass": 20,
+            "n_ranking_identical": 20,
+            "n_score_differs_same_ranking": 0,
+            "max_abs_score_difference": 0.0
+          }
+        },
+        {
+          "query_id": "q02",
+          "status": "scored",
+          "n_relevant": 1,
+          "n_returned": 5,
+          "metrics": {
+            "1": {
+              "recall": 0.0,
+              "rr": 0.0
+            },
+            "3": {
+              "recall": 0.0,
+              "rr": 0.0
+            },
+            "5": {
+              "recall": 0.0,
+              "rr": 0.0
+            }
+          },
+          "ranking": [
+            {
+              "rank": 1,
+              "doc_id": "d11",
+              "score": 1.6262613052470003,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 2,
+              "doc_id": "d12",
+              "score": 1.6262613052470003,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 3,
+              "doc_id": "d20",
+              "score": 1.5848454825327307,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 4,
+              "doc_id": "d17",
+              "score": 0.6444541883614915,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 5,
+              "doc_id": "d09",
+              "score": 0.6266843118441711,
+              "label": "nonrelevant"
+            }
+          ],
+          "measured_search_consistency": {
+            "n_measured": 20,
+            "n_identical_to_quality_pass": 20,
+            "n_ranking_identical": 20,
+            "n_score_differs_same_ranking": 0,
+            "max_abs_score_difference": 0.0
+          }
+        },
+        {
+          "query_id": "q03",
+          "status": "scored",
+          "n_relevant": 2,
+          "n_returned": 5,
+          "metrics": {
+            "1": {
+              "recall": 0.5,
+              "rr": 1.0
+            },
+            "3": {
+              "recall": 0.5,
+              "rr": 1.0
+            },
+            "5": {
+              "recall": 0.5,
+              "rr": 1.0
+            }
+          },
+          "ranking": [
+            {
+              "rank": 1,
+              "doc_id": "d03",
+              "score": 5.722764746916518,
+              "label": "relevant"
+            },
+            {
+              "rank": 2,
+              "doc_id": "d05",
+              "score": 0.411184262630425,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 3,
+              "doc_id": "d04",
+              "score": 0.4001506956546534,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 4,
+              "doc_id": "d16",
+              "score": 0.4001506956546534,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 5,
+              "doc_id": "d10",
+              "score": 0.38969379594242365,
+              "label": "nonrelevant"
+            }
+          ],
+          "measured_search_consistency": {
+            "n_measured": 20,
+            "n_identical_to_quality_pass": 20,
+            "n_ranking_identical": 20,
+            "n_score_differs_same_ranking": 0,
+            "max_abs_score_difference": 0.0
+          }
+        },
+        {
+          "query_id": "q04",
+          "status": "scored",
+          "n_relevant": 1,
+          "n_returned": 5,
+          "metrics": {
+            "1": {
+              "recall": 1.0,
+              "rr": 1.0
+            },
+            "3": {
+              "recall": 1.0,
+              "rr": 1.0
+            },
+            "5": {
+              "recall": 1.0,
+              "rr": 1.0
+            }
+          },
+          "ranking": [
+            {
+              "rank": 1,
+              "doc_id": "d07",
+              "score": 7.983921076892797,
+              "label": "relevant"
+            },
+            {
+              "rank": 2,
+              "doc_id": "d01",
+              "score": 0.0,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 3,
+              "doc_id": "d02",
+              "score": 0.0,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 4,
+              "doc_id": "d03",
+              "score": 0.0,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 5,
+              "doc_id": "d04",
+              "score": 0.0,
+              "label": "nonrelevant"
+            }
+          ],
+          "measured_search_consistency": {
+            "n_measured": 20,
+            "n_identical_to_quality_pass": 20,
+            "n_ranking_identical": 20,
+            "n_score_differs_same_ranking": 0,
+            "max_abs_score_difference": 0.0
+          }
+        },
+        {
+          "query_id": "q05",
+          "status": "scored",
+          "n_relevant": 1,
+          "n_returned": 5,
+          "metrics": {
+            "1": {
+              "recall": 1.0,
+              "rr": 1.0
+            },
+            "3": {
+              "recall": 1.0,
+              "rr": 1.0
+            },
+            "5": {
+              "recall": 1.0,
+              "rr": 1.0
+            }
+          },
+          "ranking": [
+            {
+              "rank": 1,
+              "doc_id": "d05",
+              "score": 7.603308188928775,
+              "label": "relevant"
+            },
+            {
+              "rank": 2,
+              "doc_id": "d04",
+              "score": 2.076669767659878,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 3,
+              "doc_id": "d01",
+              "score": 0.0,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 4,
+              "doc_id": "d02",
+              "score": 0.0,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 5,
+              "doc_id": "d03",
+              "score": 0.0,
+              "label": "nonrelevant"
+            }
+          ],
+          "measured_search_consistency": {
+            "n_measured": 20,
+            "n_identical_to_quality_pass": 20,
+            "n_ranking_identical": 20,
+            "n_score_differs_same_ranking": 0,
+            "max_abs_score_difference": 0.0
+          }
+        },
+        {
+          "query_id": "q06",
+          "status": "scored",
+          "n_relevant": 1,
+          "n_returned": 5,
+          "metrics": {
+            "1": {
+              "recall": 1.0,
+              "rr": 1.0
+            },
+            "3": {
+              "recall": 1.0,
+              "rr": 1.0
+            },
+            "5": {
+              "recall": 1.0,
+              "rr": 1.0
+            }
+          },
+          "ranking": [
+            {
+              "rank": 1,
+              "doc_id": "d14",
+              "score": 9.412768585711211,
+              "label": "relevant"
+            },
+            {
+              "rank": 2,
+              "doc_id": "d15",
+              "score": 4.159918168613784,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 3,
+              "doc_id": "d19",
+              "score": 4.093012293419674,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 4,
+              "doc_id": "d02",
+              "score": 4.0093480124438745,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 5,
+              "doc_id": "d04",
+              "score": 3.9573566556178585,
+              "label": "nonrelevant"
+            }
+          ],
+          "measured_search_consistency": {
+            "n_measured": 20,
+            "n_identical_to_quality_pass": 20,
+            "n_ranking_identical": 20,
+            "n_score_differs_same_ranking": 0,
+            "max_abs_score_difference": 0.0
+          }
+        },
+        {
+          "query_id": "q07",
+          "status": "scored",
+          "n_relevant": 2,
+          "n_returned": 5,
+          "metrics": {
+            "1": {
+              "recall": 0.5,
+              "rr": 1.0
+            },
+            "3": {
+              "recall": 0.5,
+              "rr": 1.0
+            },
+            "5": {
+              "recall": 0.5,
+              "rr": 1.0
+            }
+          },
+          "ranking": [
+            {
+              "rank": 1,
+              "doc_id": "d18",
+              "score": 2.7647089922433636,
+              "label": "relevant"
+            },
+            {
+              "rank": 2,
+              "doc_id": "d05",
+              "score": 0.411184262630425,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 3,
+              "doc_id": "d03",
+              "score": 0.4001506956546534,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 4,
+              "doc_id": "d04",
+              "score": 0.4001506956546534,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 5,
+              "doc_id": "d16",
+              "score": 0.4001506956546534,
+              "label": "nonrelevant"
+            }
+          ],
+          "measured_search_consistency": {
+            "n_measured": 20,
+            "n_identical_to_quality_pass": 20,
+            "n_ranking_identical": 20,
+            "n_score_differs_same_ranking": 0,
+            "max_abs_score_difference": 0.0
+          }
+        },
+        {
+          "query_id": "q08",
+          "status": "no_judged_relevant",
+          "n_relevant": 0,
+          "n_returned": 5,
+          "metrics": {
+            "1": {
+              "recall": null,
+              "rr": null
+            },
+            "3": {
+              "recall": null,
+              "rr": null
+            },
+            "5": {
+              "recall": null,
+              "rr": null
+            }
+          },
+          "ranking": [
+            {
+              "rank": 1,
+              "doc_id": "d13",
+              "score": 9.03161460332591,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 2,
+              "doc_id": "d14",
+              "score": 2.8887943668196434,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 3,
+              "doc_id": "d09",
+              "score": 2.410516590263992,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 4,
+              "doc_id": "d08",
+              "score": 2.309347725473455,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 5,
+              "doc_id": "d18",
+              "score": 2.220289577618058,
+              "label": "nonrelevant"
+            }
+          ],
+          "measured_search_consistency": {
+            "n_measured": 20,
+            "n_identical_to_quality_pass": 20,
+            "n_ranking_identical": 20,
+            "n_score_differs_same_ranking": 0,
+            "max_abs_score_difference": 0.0
+          }
+        }
+      ]
+    },
+    "embedding": {
+      "counts": {
+        "total": 8,
+        "scored": 7,
+        "no_judged_relevant": 1
+      },
+      "aggregate": {
+        "1": {
+          "macro_recall": 0.8571428571428571,
+          "mrr": 1.0
+        },
+        "3": {
+          "macro_recall": 1.0,
+          "mrr": 1.0
+        },
+        "5": {
+          "macro_recall": 1.0,
+          "mrr": 1.0
+        }
+      },
+      "queries": [
+        {
+          "query_id": "q01",
+          "status": "scored",
+          "n_relevant": 1,
+          "n_returned": 5,
+          "metrics": {
+            "1": {
+              "recall": 1.0,
+              "rr": 1.0
+            },
+            "3": {
+              "recall": 1.0,
+              "rr": 1.0
+            },
+            "5": {
+              "recall": 1.0,
+              "rr": 1.0
+            }
+          },
+          "ranking": [
+            {
+              "rank": 1,
+              "doc_id": "d01",
+              "score": 0.2707767138044881,
+              "label": "relevant"
+            },
+            {
+              "rank": 2,
+              "doc_id": "d17",
+              "score": 0.23233178956515432,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 3,
+              "doc_id": "d04",
+              "score": 0.12693328247161206,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 4,
+              "doc_id": "d11",
+              "score": 0.10160463294929073,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 5,
+              "doc_id": "d16",
+              "score": 0.09910238690020515,
+              "label": "nonrelevant"
+            }
+          ],
+          "measured_search_consistency": {
+            "n_measured": 20,
+            "n_identical_to_quality_pass": 20,
+            "n_ranking_identical": 20,
+            "n_score_differs_same_ranking": 0,
+            "max_abs_score_difference": 0.0
+          }
+        },
+        {
+          "query_id": "q02",
+          "status": "scored",
+          "n_relevant": 1,
+          "n_returned": 5,
+          "metrics": {
+            "1": {
+              "recall": 1.0,
+              "rr": 1.0
+            },
+            "3": {
+              "recall": 1.0,
+              "rr": 1.0
+            },
+            "5": {
+              "recall": 1.0,
+              "rr": 1.0
+            }
+          },
+          "ranking": [
+            {
+              "rank": 1,
+              "doc_id": "d10",
+              "score": 0.577151553116937,
+              "label": "relevant"
+            },
+            {
+              "rank": 2,
+              "doc_id": "d09",
+              "score": 0.36351075808459266,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 3,
+              "doc_id": "d01",
+              "score": 0.18097252802720426,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 4,
+              "doc_id": "d15",
+              "score": 0.17123716324391697,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 5,
+              "doc_id": "d17",
+              "score": 0.12877981040514522,
+              "label": "nonrelevant"
+            }
+          ],
+          "measured_search_consistency": {
+            "n_measured": 20,
+            "n_identical_to_quality_pass": 20,
+            "n_ranking_identical": 20,
+            "n_score_differs_same_ranking": 0,
+            "max_abs_score_difference": 0.0
+          }
+        },
+        {
+          "query_id": "q03",
+          "status": "scored",
+          "n_relevant": 2,
+          "n_returned": 5,
+          "metrics": {
+            "1": {
+              "recall": 0.5,
+              "rr": 1.0
+            },
+            "3": {
+              "recall": 1.0,
+              "rr": 1.0
+            },
+            "5": {
+              "recall": 1.0,
+              "rr": 1.0
+            }
+          },
+          "ranking": [
+            {
+              "rank": 1,
+              "doc_id": "d03",
+              "score": 0.6695009542141479,
+              "label": "relevant"
+            },
+            {
+              "rank": 2,
+              "doc_id": "d02",
+              "score": 0.5103964899660371,
+              "label": "relevant"
+            },
+            {
+              "rank": 3,
+              "doc_id": "d12",
+              "score": 0.16260104856334784,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 4,
+              "doc_id": "d10",
+              "score": 0.1520548170234559,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 5,
+              "doc_id": "d01",
+              "score": 0.10903078714118455,
+              "label": "nonrelevant"
+            }
+          ],
+          "measured_search_consistency": {
+            "n_measured": 20,
+            "n_identical_to_quality_pass": 20,
+            "n_ranking_identical": 20,
+            "n_score_differs_same_ranking": 0,
+            "max_abs_score_difference": 0.0
+          }
+        },
+        {
+          "query_id": "q04",
+          "status": "scored",
+          "n_relevant": 1,
+          "n_returned": 5,
+          "metrics": {
+            "1": {
+              "recall": 1.0,
+              "rr": 1.0
+            },
+            "3": {
+              "recall": 1.0,
+              "rr": 1.0
+            },
+            "5": {
+              "recall": 1.0,
+              "rr": 1.0
+            }
+          },
+          "ranking": [
+            {
+              "rank": 1,
+              "doc_id": "d07",
+              "score": 0.7607340359715247,
+              "label": "relevant"
+            },
+            {
+              "rank": 2,
+              "doc_id": "d05",
+              "score": 0.22625731605852123,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 3,
+              "doc_id": "d06",
+              "score": 0.18766962199894893,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 4,
+              "doc_id": "d20",
+              "score": 0.14281884894976465,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 5,
+              "doc_id": "d09",
+              "score": 0.08636268063087783,
+              "label": "nonrelevant"
+            }
+          ],
+          "measured_search_consistency": {
+            "n_measured": 20,
+            "n_identical_to_quality_pass": 20,
+            "n_ranking_identical": 20,
+            "n_score_differs_same_ranking": 0,
+            "max_abs_score_difference": 0.0
+          }
+        },
+        {
+          "query_id": "q05",
+          "status": "scored",
+          "n_relevant": 1,
+          "n_returned": 5,
+          "metrics": {
+            "1": {
+              "recall": 1.0,
+              "rr": 1.0
+            },
+            "3": {
+              "recall": 1.0,
+              "rr": 1.0
+            },
+            "5": {
+              "recall": 1.0,
+              "rr": 1.0
+            }
+          },
+          "ranking": [
+            {
+              "rank": 1,
+              "doc_id": "d05",
+              "score": 0.6603303490601876,
+              "label": "relevant"
+            },
+            {
+              "rank": 2,
+              "doc_id": "d04",
+              "score": 0.2903071305575261,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 3,
+              "doc_id": "d20",
+              "score": 0.10036702933352344,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 4,
+              "doc_id": "d15",
+              "score": 0.06739940826881356,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 5,
+              "doc_id": "d18",
+              "score": 0.06589177643443973,
+              "label": "nonrelevant"
+            }
+          ],
+          "measured_search_consistency": {
+            "n_measured": 20,
+            "n_identical_to_quality_pass": 20,
+            "n_ranking_identical": 20,
+            "n_score_differs_same_ranking": 0,
+            "max_abs_score_difference": 0.0
+          }
+        },
+        {
+          "query_id": "q06",
+          "status": "scored",
+          "n_relevant": 1,
+          "n_returned": 5,
+          "metrics": {
+            "1": {
+              "recall": 1.0,
+              "rr": 1.0
+            },
+            "3": {
+              "recall": 1.0,
+              "rr": 1.0
+            },
+            "5": {
+              "recall": 1.0,
+              "rr": 1.0
+            }
+          },
+          "ranking": [
+            {
+              "rank": 1,
+              "doc_id": "d14",
+              "score": 0.701802506266,
+              "label": "relevant"
+            },
+            {
+              "rank": 2,
+              "doc_id": "d15",
+              "score": 0.2406499619638044,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 3,
+              "doc_id": "d20",
+              "score": 0.1666216079979504,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 4,
+              "doc_id": "d04",
+              "score": 0.14895269767739833,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 5,
+              "doc_id": "d01",
+              "score": 0.14517231584750112,
+              "label": "nonrelevant"
+            }
+          ],
+          "measured_search_consistency": {
+            "n_measured": 20,
+            "n_identical_to_quality_pass": 20,
+            "n_ranking_identical": 20,
+            "n_score_differs_same_ranking": 0,
+            "max_abs_score_difference": 0.0
+          }
+        },
+        {
+          "query_id": "q07",
+          "status": "scored",
+          "n_relevant": 2,
+          "n_returned": 5,
+          "metrics": {
+            "1": {
+              "recall": 0.5,
+              "rr": 1.0
+            },
+            "3": {
+              "recall": 1.0,
+              "rr": 1.0
+            },
+            "5": {
+              "recall": 1.0,
+              "rr": 1.0
+            }
+          },
+          "ranking": [
+            {
+              "rank": 1,
+              "doc_id": "d18",
+              "score": 0.7345504483248102,
+              "label": "relevant"
+            },
+            {
+              "rank": 2,
+              "doc_id": "d19",
+              "score": 0.33364696161642826,
+              "label": "relevant"
+            },
+            {
+              "rank": 3,
+              "doc_id": "d01",
+              "score": 0.21758022002945246,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 4,
+              "doc_id": "d05",
+              "score": 0.1362051446330527,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 5,
+              "doc_id": "d03",
+              "score": 0.11906039896109044,
+              "label": "nonrelevant"
+            }
+          ],
+          "measured_search_consistency": {
+            "n_measured": 20,
+            "n_identical_to_quality_pass": 20,
+            "n_ranking_identical": 20,
+            "n_score_differs_same_ranking": 0,
+            "max_abs_score_difference": 0.0
+          }
+        },
+        {
+          "query_id": "q08",
+          "status": "no_judged_relevant",
+          "n_relevant": 0,
+          "n_returned": 5,
+          "metrics": {
+            "1": {
+              "recall": null,
+              "rr": null
+            },
+            "3": {
+              "recall": null,
+              "rr": null
+            },
+            "5": {
+              "recall": null,
+              "rr": null
+            }
+          },
+          "ranking": [
+            {
+              "rank": 1,
+              "doc_id": "d13",
+              "score": 0.28962864484999373,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 2,
+              "doc_id": "d17",
+              "score": 0.2764081088542917,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 3,
+              "doc_id": "d09",
+              "score": 0.2203787310688755,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 4,
+              "doc_id": "d20",
+              "score": 0.16344464543974874,
+              "label": "nonrelevant"
+            },
+            {
+              "rank": 5,
+              "doc_id": "d07",
+              "score": 0.1011412638591041,
+              "label": "nonrelevant"
+            }
+          ],
+          "measured_search_consistency": {
+            "n_measured": 20,
+            "n_identical_to_quality_pass": 20,
+            "n_ranking_identical": 20,
+            "n_score_differs_same_ranking": 0,
+            "max_abs_score_difference": 0.0
+          }
+        }
+      ]
+    }
+  }
+}

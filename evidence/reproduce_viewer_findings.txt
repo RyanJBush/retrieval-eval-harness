@@ -1,0 +1,21 @@
+=== BEFORE: viewer code as reviewed in handoff 05/06 ===
+viewer code: /tmp/oldpkg/src/retrieval_eval/viewer.py
+
+--- finding 2: rank 1 -> 99 for the first embedding result of q02
+ACCEPTED. Viewer shows Recall@5 = 1.0 and ['missed at k=5: it is at rank 99 of the saved top-5'] <- contradiction
+
+--- finding 3: malformed failure manifest through the command line
+exit code 1
+stderr: KeyError: 0
+traceback shown: True
+
+=== AFTER: final code ===
+viewer code: /tmp/final/retrieval-eval-harness/src/retrieval_eval/viewer.py
+
+--- finding 2: rank 1 -> 99 for the first embedding result of q02
+REJECTED with a readable message: the saved run failed its integrity checks and is not shown: embedding/q02/d10: expected rank 1, got 99
+
+--- finding 3: malformed failure manifest through the command line
+exit code 2
+stderr: error: this is an INCOMPLETE run (a failure manifest, not results). Only a completed run.json can be viewed.
+traceback shown: False
