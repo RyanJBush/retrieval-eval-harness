@@ -1,5 +1,22 @@
 # Final delivery verification
 
+## Post-publication update — November 13, 2026
+
+[Hosted run 42416440729](https://github.com/RyanJBush/retrieval-eval-harness/actions/runs/42416440729)
+passed at implementation commit `5daa6003131c1ce3e11a1673c976c24dac2c80c7`.
+Ubuntu: 404 passed, 12 model tests deselected. Windows: 403 passed, 1 skipped, 12 model tests deselected.
+Both jobs passed 14/14 viewer smoke checks. These results were inspected directly from the hosted job logs.
+
+A new independent local review recalculated the bundled metrics and latency summaries, verified fixture hashes,
+and reproduced all eight BM25 rankings/scores. Its full local suite had 390 passes, one skip and 13 loopback-HTTP
+failures caused by this review environment's socket restrictions; fresh model inference was not executed.
+See [the complete review](docs/INDEPENDENT_REVIEW.md) for commands, evidence and limits.
+
+**Historical scope:** the remaining sections preserve Claude's prepublication archive record. Statements below about
+unverified Windows behavior or absent hosted CI describe that earlier stage, not the current published CI status.
+
+## Prepublication archive record
+
 This report records the prepublication archive checks. See [GitHub Actions](https://github.com/RyanJBush/retrieval-eval-harness/actions/workflows/tests.yml)
 for hosted results. The bundled run records the source fingerprint of the [initial publication](https://github.com/RyanJBush/retrieval-eval-harness/commit/de6aa33488e70cdbdb8c06eda970ab6e2be6e3a3).
 The subsequent viewer startup fix flushes the printed URL when stdout is captured. It leaves the retrieval and timing code as published.
